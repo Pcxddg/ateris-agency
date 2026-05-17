@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ATERIS — Agencia de Marketing Digital | El tiempo es oro</title>
+<meta name="description" content="ATERIS es una agencia de marketing digital. Branding, desarrollo web, publicidad, audiovisual, diseño gráfico, redacción y dirección de proyectos." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#hero" class="logo">
+      <span class="logo__dot"></span>
+      <span class="logo__name">ATERIS</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#documentacion">Documentación</a>
+      <a href="#porque">Por qué</a>
+      <a href="#contacto">Contacto</a>
+      <div class="lang-toggle" id="langToggle" role="group" aria-label="Idioma">
+        <button type="button" data-lang="es" class="is-active" aria-pressed="true">ES</button>
+        <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <a href="#contacto" class="btn btn--primary btn--sm">Cotizar</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__bg">
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
+    <div class="hero__blob hero__blob--3"></div>
+  </div>
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <span class="eyebrow">Agencia de marketing digital</span>
+      <h1 class="hero__title">El tiempo es <span class="accent">oro</span>.</h1>
+      <p class="hero__lede">
+        El tiempo es un recurso limitado y sus clientes lo saben.
+        Dejemos de lado los caprichos y trabajemos de la mano con
+        <strong>todas las cartas sobre la mesa.</strong>
+      </p>
+      <div class="hero__cta">
+        <a href="#contacto" class="btn btn--primary">Empezar un proyecto</a>
+        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong>8</strong><span>áreas de servicio</span></li>
+        <li><strong>70+</strong><span>entregables definidos</span></li>
+        <li><strong>100%</strong><span>cartas sobre la mesa</span></li>
+      </ul>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="card card--float">
+        <div class="card__head">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="card__title">ATERIS · brief</span>
+        </div>
+        <div class="card__row"><span class="tag tag--yellow">Ejecución</span><b>4h</b></div>
+        <div class="card__row"><span class="tag tag--coral">Entrega</span><b>3 días</b></div>
+        <div class="card__row"><span class="tag tag--violet">Propuestas</span><b>3</b></div>
+        <div class="card__bar"><i style="width:78%"></i></div>
+        <small class="card__note">Estrategia · Planificación de actividades</small>
+      </div>
+      <div class="card card--mini">
+        <span class="card__mini-label">Entregable</span>
+        <strong>Presentación</strong>
+      </div>
+    </div>
+  </div>
+  <a href="#servicios" class="scroll-down" aria-label="Bajar">
+    <span></span>
+  </a>
+</section>
+
+<!-- MANIFIESTO STRIP -->
+<section class="strip">
+  <div class="strip__track">
+    <span>Branding</span><span>·</span>
+    <span>Desarrollo Web</span><span>·</span>
+    <span>Marketing Digital</span><span>·</span>
+    <span>Publicidad</span><span>·</span>
+    <span>Diseño Gráfico</span><span>·</span>
+    <span>Audiovisual</span><span>·</span>
+    <span>Redacción</span><span>·</span>
+    <span>Dirección de proyectos</span><span>·</span>
+    <span>Branding</span><span>·</span>
+    <span>Desarrollo Web</span><span>·</span>
+    <span>Marketing Digital</span><span>·</span>
+    <span>Publicidad</span><span>·</span>
+    <span>Diseño Gráfico</span><span>·</span>
+    <span>Audiovisual</span><span>·</span>
+    <span>Redacción</span><span>·</span>
+    <span>Dirección de proyectos</span><span>·</span>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+  <div class="container">
+    <header class="section__head">
+      <span class="eyebrow">Servicios</span>
+      <h2>Todo lo que necesitas, en un solo lugar.</h2>
+      <p>Cada actividad con su tiempo de ejecución, plazo de entrega, propuestas incluidas y entregable. Sin caprichos. Sin sorpresas.</p>
+    </header>
+
+    <div class="legend">
+      <span class="legend__item"><i class="tag tag--yellow">Ejecución</i> Horas de trabajo</span>
+      <span class="legend__item"><i class="tag tag--coral">Entrega</i> Plazo al cliente</span>
+      <span class="legend__item"><i class="tag tag--violet">Propuestas</i> Alternativas incluidas</span>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="direccion">Dirección de proyectos</button>
+      <button class="tab" data-tab="branding">Branding</button>
+      <button class="tab" data-tab="web">Desarrollo Web</button>
+      <button class="tab" data-tab="marketing">Marketing Digital</button>
+      <button class="tab" data-tab="publicidad">Publicidad</button>
+      <button class="tab" data-tab="grafico">Diseño Gráfico</button>
+      <button class="tab" data-tab="audio">Audiovisual</button>
+      <button class="tab" data-tab="redaccion">Redacción</button>
+    </div>
+
+    <!-- DIRECCIÓN DE PROYECTOS -->
+    <article class="panel is-active" id="direccion">
+      <div class="panel__head">
+        <h3>Dirección de proyectos</h3>
+        <p>Análisis, estrategia e informes para que cada decisión esté respaldada por datos.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Análisis de marca</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Situación actual de la marca</td><td>Presentación</td></tr>
+            <tr><td>Estrategia</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Planificación de actividades</td><td>Presentación</td></tr>
+            <tr><td>Informe</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Analytics, Adwords, Social Media, Actividades</td><td>Presentación</td></tr>
+            <tr><td>Asesoría / Consultas</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">—</span></td><td>Activación de plataformas, asesorías técnicas, análisis</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- BRANDING -->
+    <article class="panel" id="branding">
+      <div class="panel__head">
+        <h3>Branding</h3>
+        <p>De la idea al manual de marca. Identidad coherente, memorable y aplicable.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Concepto de marca</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Definir estilo y comunicación</td><td>Presentación</td></tr>
+            <tr><td>Storytelling</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Slogan, story, nombre de story, frases ancla</td><td>PDF</td></tr>
+            <tr><td>Moodboard</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Presentación de referencias visuales</td><td>PDF</td></tr>
+            <tr><td>Naming</td><td><span class="pill pill--yellow">7h</span></td><td><span class="pill pill--coral">4 días</span></td><td><span class="pill pill--violet">3</span></td><td>Nombres viables de registro</td><td>Presentación</td></tr>
+            <tr><td>Logotipo</td><td><span class="pill pill--yellow">13h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">3</span></td><td>Diseño de logotipo</td><td>Presentación</td></tr>
+            <tr><td>Guía de estilo</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Guía rápida para el uso de la marca</td><td>Online</td></tr>
+            <tr><td>Pack de íconos</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Pack de 10 íconos en formatos EPS y SVG</td><td>PDF</td></tr>
+            <tr><td>Brandbook PDF</td><td><span class="pill pill--yellow">8h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Manual de identidad</td><td>PDF</td></tr>
+            <tr><td>Aplicaciones</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">3</span></td><td>Por aplicación</td><td>Editable</td></tr>
+            <tr><td>Brandbook web</td><td><span class="pill pill--yellow">20h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Brandbook web con accesos al cliente</td><td>Online</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- DESARROLLO WEB -->
+    <article class="panel" id="web">
+      <div class="panel__head">
+        <h3>Desarrollo Web</h3>
+        <p>Sitios y ecommerce: UX, diseño, programación, seguridad y capacitación.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Experiencia del usuario UX</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido de 5 secciones (5 escenas por sección)</td><td>PDF</td></tr>
+            <tr><td>Diseño de interfaz UI</td><td><span class="pill pill--yellow">20h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Diseño de 5 secciones (5 escenas por sección)</td><td>JPG</td></tr>
+            <tr><td>Instalación</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Configuración de correos y servidor FTP</td><td>Online</td></tr>
+            <tr><td>Programación</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Programación de 5 secciones (5 escenas por sección)</td><td>Online</td></tr>
+            <tr><td>Sitio móvil</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Programación de 5 secciones (5 escenas por sección)</td><td>Online</td></tr>
+            <tr><td>Ecommerce</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Configuración WooCommerce</td><td>Online</td></tr>
+            <tr><td>Optimización</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Optimización del sistema y entrega</td><td>Online</td></tr>
+            <tr><td>Migración de web</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Migración de sitio</td><td>Online</td></tr>
+            <tr><td>Planeación de web</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Estructura y funcionalidad de front end</td><td>Online</td></tr>
+            <tr><td>Consultas e investigaciones web</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Asesoría técnica</td><td>Presentación</td></tr>
+            <tr><td>Capacitación publicación / contenido</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Capacitación presencial o videoconferencia</td><td>Online</td></tr>
+            <tr><td>Capacitación carga de producto</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Capacitación presencial o videoconferencia</td><td>Online</td></tr>
+            <tr><td>Seguridad del sitio</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Seguridad del sitio</td><td>Online</td></tr>
+            <tr><td>Manual de carga de producto</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido, corrección de estilo y diseño</td><td>PDF</td></tr>
+            <tr><td>Manual de publicación post / contenido</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido, corrección de estilo y diseño</td><td>PDF</td></tr>
+            <tr><td>Automatizaciones</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Mailchimp · CRM · Zapier</td><td>Online</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- MARKETING DIGITAL -->
+    <article class="panel" id="marketing">
+      <div class="panel__head">
+        <h3>Marketing Digital</h3>
+        <p>Contenido, redes, email y automatización. Conversa con tu audiencia con consistencia.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Parrilla de contenidos mensual</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Planeación de 12 contenidos con referencia</td><td>Online</td></tr>
+            <tr><td>Look &amp; Feel</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Portada y cover (redes sociales)</td><td>Online</td></tr>
+            <tr><td>Community Manager</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">30 días</span></td><td><span class="pill pill--violet">1</span></td><td>Administración de 12 contenidos</td><td>Online</td></tr>
+            <tr><td>Manual de atención al cliente</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Formato PDF</td><td>PDF</td></tr>
+            <tr><td>Newsletter</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Template de Mailchimp</td><td>Online</td></tr>
+            <tr><td>Artículo / comunicado</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo una cuartilla, diseño y contenido</td><td>Online</td></tr>
+            <tr><td>Ebook</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 2 páginas</td><td>PDF</td></tr>
+            <tr><td>Landing page</td><td><span class="pill pill--yellow">8h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 4 escenas</td><td>Online</td></tr>
+            <tr><td>Video (30 seg)</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y postproducción</td><td>MP4</td></tr>
+            <tr><td>Animación (30 seg)</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Diseño, animación y musicalización</td><td>MP4</td></tr>
+            <tr><td>Traducción</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 1 cuartilla</td><td>Editable</td></tr>
+            <tr><td>Podcast (15 min)</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Copy, grabación y edición</td><td>MP4</td></tr>
+            <tr><td>Streaming (15 min)</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y postproducción</td><td>MP4</td></tr>
+            <tr><td>Arte JPG</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido y diseño</td><td>JPG</td></tr>
+            <tr><td>Canva, secuencia</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido y diseño</td><td>JPG</td></tr>
+            <tr><td>Infografía</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 1 página carta</td><td>JPG</td></tr>
+            <tr><td>Infografía animada (20 seg)</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Diseño, animación y musicalización</td><td>MP4</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- PUBLICIDAD -->
+    <article class="panel" id="publicidad">
+      <div class="panel__head">
+        <h3>Publicidad</h3>
+        <p>Conceptos creativos que viajan a cualquier formato.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Concepto de campaña</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Estrategia y planeación</td><td>Presentación</td></tr>
+            <tr><td>Gráfico maestro</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">3</span></td><td>Carta, billboard, social media y POP</td><td>Presentación</td></tr>
+            <tr><td>Aplicaciones</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">3</span></td><td>Por aplicación</td><td>Editable</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- DISEÑO GRÁFICO -->
+    <article class="panel" id="grafico">
+      <div class="panel__head">
+        <h3>Diseño Gráfico</h3>
+        <p>Piezas impresas y digitales con corrección de estilo y diseño cuidado.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Etiqueta de producto</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">3</span></td><td>Formato máximo 1/3 carta</td><td>Editable</td></tr>
+            <tr><td>Empaque</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">3</span></td><td>Previsualización tipo render</td><td>JPG</td></tr>
+            <tr><td>Plano mecánico</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Planos para impresión</td><td>Editable</td></tr>
+            <tr><td>Brochure / catálogo / revista</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño (4 páginas)</td><td>Editable</td></tr>
+            <tr><td>Presentación PowerPoint</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño (por diapositiva)</td><td>Editable</td></tr>
+            <tr><td>Escaparate</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Editable</td></tr>
+            <tr><td>Stand 3×3</td><td><span class="pill pill--yellow">12h</span></td><td><span class="pill pill--coral">4 días</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Editable</td></tr>
+            <tr><td>Exhibidor 1×1</td><td><span class="pill pill--yellow">8h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Online</td></tr>
+            <tr><td>Banner display</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Editable</td></tr>
+            <tr><td>Lona publicitaria</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
+            <tr><td>Tríptico</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
+            <tr><td>Flyer</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
+            <tr><td>Infografía (1 carta)</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
+            <tr><td>Retoque fotográfico</td><td><span class="pill pill--yellow">0.3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección y calibración de color</td><td>JPG</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- AUDIOVISUAL -->
+    <article class="panel" id="audio">
+      <div class="panel__head">
+        <h3>Audiovisual</h3>
+        <p>Video, foto y animación. Producción y post producción de alta calidad.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Animación (1 min)</td><td><span class="pill pill--yellow">26h</span></td><td><span class="pill pill--coral">16 días</span></td><td><span class="pill pill--violet">1</span></td><td>Render, diseño, animación y musicalización</td><td>MP4</td></tr>
+            <tr><td>Video corporativo (1 min)</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y post producción</td><td>MP4</td></tr>
+            <tr><td>Foto producto</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y post producción (3 vistas)</td><td>JPG</td></tr>
+            <tr><td>Foto bodegón</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y post producción</td><td>JPG</td></tr>
+            <tr><td>Foto instalaciones</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>4 hr de cobertura y 2 hr de edición</td><td>JPG</td></tr>
+            <tr><td>Foto publicitaria</td><td><span class="pill pill--yellow">12h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>8 hr de sesión y 4 de edición</td><td>JPG</td></tr>
+            <tr><td>Foto evento</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>4 hr de cobertura y 2 hr de edición</td><td>JPG</td></tr>
+            <tr><td>Voz Off (1 min)</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Grabación de voz, limpieza de audio</td><td>MP4</td></tr>
+            <tr><td>Retoque 3D</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">4</span></td><td>Fotografías con volumen (fondo blanco, ecommerce)</td><td>JPG</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <!-- REDACCIÓN -->
+    <article class="panel" id="redaccion">
+      <div class="panel__head">
+        <h3>Redacción</h3>
+        <p>Palabras que comunican: guiones, boletines, descripciones y experiencia conversacional.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="svc">
+          <thead>
+            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Guión de radio (30 seg)</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla</td><td>PDF</td></tr>
+            <tr><td>Guión corporativo (1 min)</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla</td><td>PDF</td></tr>
+            <tr><td>Boletines informativos</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla (notas breves)</td><td>PDF</td></tr>
+            <tr><td>Lineamientos de comunicación</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Comunicación escrita y visual de marca</td><td>PDF</td></tr>
+            <tr><td>Traducciones</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Traducción por hoja o sección de web</td><td>PDF</td></tr>
+            <tr><td>Descripción de producto</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">10</span></td><td>Características de producto para web</td><td>PDF</td></tr>
+            <tr><td>Corrección de estilo</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla</td><td>PDF</td></tr>
+            <tr><td>Desarrollo de chatbot</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Análisis y listado de chats automáticos (WhatsApp, Messenger, web chat)</td><td>PDF</td></tr>
+            <tr><td>UX Writing</td><td><span class="pill pill--yellow">—</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Experiencia de usuario para automatizaciones + análisis</td><td>PDF</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="process" id="proceso">
+  <div class="container">
+    <header class="section__head section__head--light">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>Cuatro pasos, todas las cartas sobre la mesa.</h2>
+      <p>Cada proyecto avanza con tiempos y entregables claros. Sin sorpresas, sin caprichos.</p>
+    </header>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num">01</span>
+        <h3>Análisis</h3>
+        <p>Diagnóstico de marca, mercado y datos. Punto de partida realista.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">02</span>
+        <h3>Estrategia</h3>
+        <p>Planificación de actividades con tiempos, propuestas y entregables.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">03</span>
+        <h3>Ejecución</h3>
+        <p>Producción de cada pieza con horas y plazos previamente acordados.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">04</span>
+        <h3>Informe</h3>
+        <p>Resultados medibles: Analytics, Ads, Social Media y siguientes pasos.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section class="why" id="porque">
+  <div class="container why__grid">
+    <div class="why__copy">
+      <span class="eyebrow">Por qué ATERIS</span>
+      <h2>Procesos claros. Entregables tangibles.</h2>
+      <p class="why__lede">No vendemos promesas: cada actividad tiene horas de ejecución, plazo de entrega, número de propuestas y formato del entregable. Tú decides, nosotros ejecutamos.</p>
+      <a href="#contacto" class="btn btn--primary">Conversemos</a>
+    </div>
+    <ul class="why__list">
+      <li>
+        <div class="why__icon">⏱</div>
+        <h4>Tiempos pactados</h4>
+        <p>Cada entregable con horas y plazo definidos desde el día uno.</p>
+      </li>
+      <li>
+        <div class="why__icon">◎</div>
+        <h4>Propuestas reales</h4>
+        <p>Alternativas tangibles para que elijas con criterio, no con corazonadas.</p>
+      </li>
+      <li>
+        <div class="why__icon">⚙</div>
+        <h4>Equipo integral</h4>
+        <p>Branding, web, contenido, publicidad y audiovisual bajo un solo techo.</p>
+      </li>
+      <li>
+        <div class="why__icon">↗</div>
+        <h4>Resultados medibles</h4>
+        <p>Informes con Analytics, Adwords, Social Media y siguientes pasos.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- DOCUMENTACIÓN DETALLADA — MARKETING DIGITAL -->
+<section class="docs" id="documentacion">
+  <div class="container">
+    <header class="section__head">
+      <span class="eyebrow">Documentación</span>
+      <h2>ATERIS Marketing Digital — Manual operativo</h2>
+      <p>Aquí explicamos a fondo cómo trabajamos cada pieza del área de Marketing Digital: qué hacemos, cómo lo hacemos, qué entregamos y qué resultados puedes esperar.</p>
+    </header>
+
+    <div class="kpi-grid">
+      <div class="kpi"><strong>12</strong><span>contenidos / mes</span></div>
+      <div class="kpi"><strong>30</strong><span>días de gestión</span></div>
+      <div class="kpi"><strong>17</strong><span>tipos de entregable</span></div>
+      <div class="kpi"><strong>4</strong><span>canales activados</span></div>
+    </div>
+
+    <div class="docs__layout">
+      <aside class="docs__toc">
+        <h5>Contenido</h5>
+        <ul>
+          <li><a href="#doc-intro" class="is-active">Filosofía</a></li>
+          <li><a href="#doc-flujo">Flujo de trabajo</a></li>
+          <li><a href="#doc-parrilla">Parrilla mensual</a></li>
+          <li><a href="#doc-lookfeel">Look &amp; Feel</a></li>
+          <li><a href="#doc-cm">Community Manager</a></li>
+          <li><a href="#doc-atc">Atención al cliente</a></li>
+          <li><a href="#doc-news">Newsletter</a></li>
+          <li><a href="#doc-articulo">Artículo / comunicado</a></li>
+          <li><a href="#doc-ebook">Ebook</a></li>
+          <li><a href="#doc-landing">Landing page</a></li>
+          <li><a href="#doc-video">Video y animación</a></li>
+          <li><a href="#doc-podcast">Podcast / Streaming</a></li>
+          <li><a href="#doc-traduccion">Traducción</a></li>
+          <li><a href="#doc-arte">Arte, Canva, Infografía</a></li>
+          <li><a href="#doc-medicion">Medición e informes</a></li>
+          <li><a href="#doc-faq">Preguntas frecuentes</a></li>
+        </ul>
+      </aside>
+
+      <div class="docs__content">
+
+        <section id="doc-intro">
+          <h3>1. Filosofía del área</h3>
+          <p>El marketing digital de ATERIS parte de una premisa simple: <strong>el tiempo es oro</strong>. Cada acción que tomamos en una marca cuesta horas, presupuesto y oportunidad. Por eso documentamos todo: tiempos de ejecución, plazos de entrega, número de propuestas y formato del entregable.</p>
+          <blockquote>“Dejemos de lado los caprichos y trabajemos de la mano con todas las cartas sobre la mesa.”</blockquote>
+          <p>El área se sostiene sobre cuatro principios:</p>
+          <ul>
+            <li><strong>Planeación primero:</strong> ninguna pieza sale al aire sin estar dentro de una parrilla mensual aprobada.</li>
+            <li><strong>Consistencia visual:</strong> todo respeta el Look &amp; Feel y la guía de marca acordada.</li>
+            <li><strong>Datos antes que opiniones:</strong> cada decisión se valida con métricas y se reporta en el informe mensual.</li>
+            <li><strong>Tiempos pactados:</strong> tú sabes cuánto tarda cada cosa antes de empezar.</li>
+          </ul>
+        </section>
+
+        <section id="doc-flujo">
+          <h3>2. Flujo de trabajo mensual</h3>
+          <p>Así se ve un mes operativo en ATERIS Marketing Digital:</p>
+          <div class="flow">
+            <div class="flow__step"><b>Día 1–2</b><span>Parrilla mensual</span></div>
+            <div class="flow__step"><b>Día 3–5</b><span>Producción de piezas</span></div>
+            <div class="flow__step"><b>Día 6–8</b><span>Revisión y aprobación</span></div>
+            <div class="flow__step"><b>Día 9–30</b><span>Publicación + community</span></div>
+            <div class="flow__step"><b>Día 30</b><span>Informe + cierre</span></div>
+          </div>
+          <p>Cada etapa tiene responsable, plazo y entregable definido. Si una pieza requiere cambios, se gestionan dentro de los tiempos previstos para no romper el calendario.</p>
+        </section>
+
+        <section id="doc-parrilla">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Parrilla de contenidos mensual</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">2h</span>
+                <span class="pill pill--coral">2 días</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p><strong>Qué es.</strong> Planeación de 12 contenidos para el mes con referencia visual y de copy. Es el documento maestro del área.</p>
+            <p><strong>Qué incluye:</strong></p>
+            <ul>
+              <li>Calendario con fecha y hora de publicación por pieza.</li>
+              <li>Canal (Instagram, Facebook, LinkedIn, TikTok, X, web).</li>
+              <li>Objetivo de la pieza (awareness, engagement, conversión, recordación).</li>
+              <li>Copy completo, hashtags y referencia visual.</li>
+              <li>Etiqueta de campaña o pilar de contenido.</li>
+            </ul>
+            <p><strong>Entregable:</strong> tablero online editable (Notion / Google Sheets / Trello).</p>
+          </div>
+        </section>
+
+        <section id="doc-lookfeel">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Look &amp; Feel de redes sociales</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">2h</span>
+                <span class="pill pill--coral">10 días</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p><strong>Qué es.</strong> Definimos portada, cover, plantillas de feed y estilo visual unificado para que tu marca se vea siempre coherente.</p>
+            <ul>
+              <li>Portadas y banners (Facebook, LinkedIn, X, YouTube).</li>
+              <li>Plantillas de feed (3–5 estilos rotables).</li>
+              <li>Plantilla de historia y reel.</li>
+              <li>Set de íconos y elementos gráficos reutilizables.</li>
+            </ul>
+            <p><strong>Entregable:</strong> kit online con archivos editables.</p>
+          </div>
+        </section>
+
+        <section id="doc-cm">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Community Manager</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">2h / día</span>
+                <span class="pill pill--coral">30 días</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p><strong>Qué es.</strong> Administración integral de 12 contenidos al mes: publicación, monitoreo, interacción y reportes.</p>
+            <ul>
+              <li><strong>Publicación:</strong> calendarización y subida en tiempo y forma.</li>
+              <li><strong>Moderación:</strong> respuesta a comentarios y mensajes en horario hábil.</li>
+              <li><strong>Crisis básica:</strong> escalado al cliente con protocolo definido.</li>
+              <li><strong>Monitoreo:</strong> menciones, etiquetas y palabras clave de marca.</li>
+            </ul>
+            <p><strong>Entregable:</strong> tablero online con métricas semanales + informe mensual.</p>
+          </div>
+        </section>
+
+        <section id="doc-atc">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Manual de atención al cliente</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">2h</span>
+                <span class="pill pill--coral">1 día</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p><strong>Qué es.</strong> Documento PDF con respuestas tipo, tono de voz, casos críticos y árbol de decisión para que cualquier persona del equipo responda como la marca.</p>
+            <p><strong>Entregable:</strong> PDF descargable + plantillas de respuesta.</p>
+          </div>
+        </section>
+
+        <section id="doc-news">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Newsletter</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">3h</span>
+                <span class="pill pill--coral">1 día</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p><strong>Qué es.</strong> Template de email diseñado y armado en Mailchimp (o plataforma equivalente) listo para enviarse.</p>
+            <ul>
+              <li>Diseño responsive (móvil + escritorio).</li>
+              <li>Bloques reutilizables para futuras campañas.</li>
+              <li>Configuración de listas y segmentos básicos.</li>
+              <li>Pruebas A/B opcionales en asunto.</li>
+            </ul>
+            <p><strong>Entregable:</strong> campaña online lista para programarse.</p>
+          </div>
+        </section>
+
+        <section id="doc-articulo">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Artículo / comunicado</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">2h</span>
+                <span class="pill pill--coral">1 día</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p>Máximo una cuartilla, diseño y contenido. Ideal para notas de blog, comunicados de prensa o anuncios oficiales.</p>
+            <ul>
+              <li>Investigación breve y verificación de datos.</li>
+              <li>Redacción, corrección de estilo y SEO básico.</li>
+              <li>Diseño de cabecera y maquetación web.</li>
+            </ul>
+            <p><strong>Entregable:</strong> artículo publicado online o documento listo para publicar.</p>
+          </div>
+        </section>
+
+        <section id="doc-ebook">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Ebook</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">4h</span>
+                <span class="pill pill--coral">2 días</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p>Pieza de hasta 2 páginas pensada como lead magnet o material descargable de alto valor.</p>
+            <ul>
+              <li>Estructura editorial (intro, desarrollo, CTA).</li>
+              <li>Diseño visual con identidad de marca.</li>
+              <li>Optimización para descarga (PDF ligero, hipervínculos).</li>
+            </ul>
+            <p><strong>Entregable:</strong> PDF.</p>
+          </div>
+        </section>
+
+        <section id="doc-landing">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Landing page</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">8h</span>
+                <span class="pill pill--coral">3 días</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p>Máximo 4 escenas, enfocada en conversión. Cada escena tiene un objetivo específico:</p>
+            <ul>
+              <li><strong>Hero:</strong> propuesta de valor + CTA principal.</li>
+              <li><strong>Beneficios:</strong> 3 a 5 puntos clave.</li>
+              <li><strong>Prueba social:</strong> testimonios, logos o casos.</li>
+              <li><strong>Cierre:</strong> formulario o CTA final.</li>
+            </ul>
+            <p><strong>Entregable:</strong> landing online con tracking básico (Analytics + píxel).</p>
+          </div>
+        </section>
+
+        <section id="doc-video">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Video y animación (30 seg)</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">3–4h</span>
+                <span class="pill pill--coral">1–5 días</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p>Producimos dos formatos de pieza corta:</p>
+            <ul>
+              <li><strong>Video (30 seg):</strong> producción y postproducción con material real o stock. Ideal para reels, ads y testimoniales cortos.</li>
+              <li><strong>Animación (30 seg):</strong> diseño, animación y musicalización. Perfecta para explicar conceptos o anunciar promociones.</li>
+              <li><strong>Infografía animada (20 seg):</strong> diseño, animación y musicalización de datos clave.</li>
+            </ul>
+            <p><strong>Entregable:</strong> archivo MP4 optimizado para cada red social.</p>
+          </div>
+        </section>
+
+        <section id="doc-podcast">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Podcast y Streaming (15 min)</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">2–4h</span>
+                <span class="pill pill--coral">1 día</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <ul>
+              <li><strong>Podcast (15 min):</strong> copy, grabación y edición. Producimos el episodio listo para subir a Spotify / Apple Podcasts / YouTube.</li>
+              <li><strong>Streaming (15 min):</strong> producción y postproducción de transmisiones en vivo (escenografía digital, gráficos, edición de la grabación).</li>
+            </ul>
+            <p><strong>Entregable:</strong> MP4 o MP3 final + miniaturas y copy de publicación.</p>
+          </div>
+        </section>
+
+        <section id="doc-traduccion">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Traducción</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">1h</span>
+                <span class="pill pill--coral">1 día</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <p>Hasta una cuartilla por unidad. Traducción profesional, no automática, con localización al mercado objetivo.</p>
+            <p><strong>Entregable:</strong> documento editable.</p>
+          </div>
+        </section>
+
+        <section id="doc-arte">
+          <div class="doc-card">
+            <div class="doc-card__head">
+              <h4>Arte JPG, Canva y Infografía</h4>
+              <div class="doc-card__meta">
+                <span class="pill pill--yellow">1–3h</span>
+                <span class="pill pill--coral">1 día</span>
+                <span class="pill pill--violet">1 propuesta</span>
+              </div>
+            </div>
+            <ul>
+              <li><strong>Arte JPG:</strong> contenido y diseño de una pieza individual para redes.</li>
+              <li><strong>Canva, secuencia:</strong> carrusel o secuencia de piezas (ideal para storytelling).</li>
+              <li><strong>Infografía:</strong> hasta 1 página carta. Datos, procesos o comparativas visualizadas.</li>
+            </ul>
+            <p><strong>Entregable:</strong> JPG optimizado para cada red.</p>
+          </div>
+        </section>
+
+        <section id="doc-medicion">
+          <h3>3. Medición e informes</h3>
+          <p>Todo lo que producimos se mide. Cada mes recibes un informe con:</p>
+          <ul>
+            <li><strong>Analytics:</strong> tráfico, fuentes, comportamiento y conversiones del sitio.</li>
+            <li><strong>Adwords:</strong> inversión, impresiones, clics, CPC y conversiones por campaña.</li>
+            <li><strong>Social Media:</strong> alcance, engagement, crecimiento y mejores piezas.</li>
+            <li><strong>Actividades:</strong> qué se hizo, qué se publicará y qué decisiones tomar el próximo mes.</li>
+          </ul>
+          <p>El informe es una <strong>presentación</strong> que se revisa contigo en sesión de 60 minutos. No es un PDF que se manda y se olvida: es una conversación con datos al frente.</p>
+        </section>
+
+        <section id="doc-faq">
+          <h3>4. Preguntas frecuentes</h3>
+
+          <h4>¿Puedo contratar solo una pieza, sin todo el paquete mensual?</h4>
+          <p>Sí. Cada actividad del listado se puede cotizar individualmente. La parrilla mensual es la opción más eficiente, pero no es obligatoria.</p>
+
+          <h4>¿Qué pasa si pido cambios fuera de las propuestas incluidas?</h4>
+          <p>Las propuestas incluidas (1 a 3 según la actividad) cubren la mayoría de los casos. Cambios adicionales se cotizan por hora extra, siempre con tu aprobación antes de ejecutar.</p>
+
+          <h4>¿Quién es dueño del contenido producido?</h4>
+          <p>Tú. Una vez entregado y pagado, todo el material es 100% propiedad de tu marca, con archivos editables incluidos cuando aplique.</p>
+
+          <h4>¿Manejan publicidad pagada (ads)?</h4>
+          <p>Sí, dentro del módulo de <a href="#publicidad">Publicidad</a> y la actividad de <em>Concepto de campaña</em>. La gestión y pauta de ads se cotiza aparte del marketing digital orgánico.</p>
+
+          <h4>¿Cómo empezamos?</h4>
+          <p>Con un <strong>Análisis de marca</strong> (2h de ejecución, 3 días de entrega). De ahí sale la estrategia y la primera parrilla. <a href="#contacto">Escríbenos para arrancar.</a></p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACTO -->
+<section class="cta" id="contacto">
+  <div class="container cta__inner">
+    <div class="cta__copy">
+      <span class="eyebrow eyebrow--light">Cotiza tu proyecto</span>
+      <h2>¿Empezamos?</h2>
+      <p>Cuéntanos qué necesitas. Te respondemos con un plan claro de tiempos, propuestas y entregables.</p>
+      <ul class="cta__contacts">
+        <li><strong>Email</strong><a href="mailto:hola@ateris.agency">hola@ateris.agency</a></li>
+        <li><strong>WhatsApp</strong><a href="#">+52 000 000 0000</a></li>
+        <li><strong>Horario</strong><span>Lun – Vie · 9:00 a 18:00</span></li>
+      </ul>
+    </div>
+    <form class="cta__form" id="ctaForm" novalidate>
+      <div class="field">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+      </div>
+      <div class="field">
+        <label for="service">Servicio de interés</label>
+        <select id="service" name="service">
+          <option>Dirección de proyectos</option>
+          <option>Branding</option>
+          <option>Desarrollo Web</option>
+          <option>Marketing Digital</option>
+          <option>Publicidad</option>
+          <option>Diseño Gráfico</option>
+          <option>Audiovisual</option>
+          <option>Redacción</option>
+          <option>Aún no lo sé</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="msg">Mensaje</label>
+        <textarea id="msg" name="msg" rows="4" placeholder="Cuéntanos brevemente tu proyecto"></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+      <p class="form__status" id="formStatus" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#hero" class="logo logo--light">
+        <span class="logo__dot"></span>
+        <span class="logo__name">ATERIS</span>
+      </a>
+      <p>Agencia de marketing digital. El tiempo es oro.</p>
+    </div>
+    <div class="footer__col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#branding">Branding</a></li>
+        <li><a href="#web">Desarrollo Web</a></li>
+        <li><a href="#marketing">Marketing Digital</a></li>
+        <li><a href="#publicidad">Publicidad</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Estudio</h5>
+      <ul>
+        <li><a href="#grafico">Diseño Gráfico</a></li>
+        <li><a href="#audio">Audiovisual</a></li>
+        <li><a href="#redaccion">Redacción</a></li>
+        <li><a href="#direccion">Dirección de proyectos</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="mailto:hola@ateris.agency">hola@ateris.agency</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <span>© <span id="year"></span> ATERIS. Todos los derechos reservados.</span>
+      <span>Hecho con ☕ y todas las cartas sobre la mesa.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
