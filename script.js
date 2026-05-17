@@ -79,7 +79,7 @@
   });
 
   /* ---------- Scroll-spy: marca la sección activa en el nav (H1) ---------- */
-  const navAnchors = Array.from(document.querySelectorAll('.nav__links a[href^="#"]'));
+  const navAnchors = Array.from(document.querySelectorAll('.nav__links a[href^="#"]:not(.btn)'));
   const sectionMap = new Map(); // id → anchor
   navAnchors.forEach(a => {
     const id = a.getAttribute('href').slice(1);
