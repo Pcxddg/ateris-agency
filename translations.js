@@ -509,6 +509,8 @@
     // Form status messages
     "Necesitamos un nombre y un email válido.": "Precisamos de um nome e um email válido.",
     "¡Gracias! Te contactaremos en menos de 24 horas.": "Obrigado! Entraremos em contato em menos de 24 horas.",
+    "Máximo 1200 caracteres.": "Máximo 1200 caracteres.",
+    "Saltar al contenido": "Saltar para o conteúdo",
 
     // ===== Footer =====
     "Agencia de marketing digital. El tiempo es oro.": "Agência de marketing digital. O tempo é ouro.",
@@ -604,8 +606,7 @@
     try { localStorage.setItem('ateris.lang', target); } catch (_) {}
   }
 
-  // ---------- Inicialización ----------
-  document.addEventListener('DOMContentLoaded', () => {
+  function init() {
     const toggle = document.getElementById('langToggle');
     if (toggle) {
       toggle.addEventListener('click', e => {
@@ -615,15 +616,26 @@
       });
     }
 
-    // Aplicar idioma guardado (o detección por navegador)
+    // El sitio se muestra principalmente en portugués.
+    // Sólo permanece en español si el usuario lo eligió antes.
     let saved = null;
     try { saved = localStorage.getItem('ateris.lang'); } catch (_) {}
-    if (!saved) {
-      const browser = (navigator.language || '').toLowerCase();
-      if (browser.startsWith('pt')) saved = 'pt';
-    }
-    if (saved && saved !== 'es') setLang(saved);
-  });
+    const target = saved === 'es' ? 'es' : 'pt';
+    if (target !== currentLang) setLang(target);
+
+    // Quita el cloak del <html> para revelar el contenido ya traducido.
+    document.documentElement.classList.remove('i18n-cloak');
+  }
+
+  // El script va al final de <body>, así que el DOM ya está listo.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  // Failsafe: si algo falla, mostramos el contenido a más tardar en 600ms.
+  setTimeout(() => document.documentElement.classList.remove('i18n-cloak'), 600);
 
   // Exponer por si se necesita desde consola/QA
   window.__aterisI18n = { setLang, get current() { return currentLang; } };

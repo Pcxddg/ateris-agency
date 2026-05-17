@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ATERIS — Agencia de Marketing Digital | El tiempo es oro</title>
-<meta name="description" content="ATERIS es una agencia de marketing digital. Branding, desarrollo web, publicidad, audiovisual, diseño gráfico, redacción y dirección de proyectos." />
+<meta name="theme-color" content="#111114" />
+<title>ATERIS — Agência de Marketing Digital | O tempo é ouro</title>
+<meta name="description" content="ATERIS é uma agência de marketing digital. Branding, desenvolvimento web, publicidade, audiovisual, design gráfico, redação e direção de projetos." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="ATERIS — Agência de Marketing Digital" />
+<meta property="og:description" content="Branding, web, marketing, publicidade e mais. Todas as cartas sobre a mesa." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Cloak: evita o flash de conteúdo em espanhol antes da troca para o idioma do usuário -->
+<style>html.i18n-cloak body { visibility: hidden; }</style>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
+<script>document.documentElement.classList.add('i18n-cloak');</script>
 </head>
 <body>
+
+<a href="#hero" class="skip-link">Saltar al contenido</a>
 
 <!-- NAV -->
 <header class="nav" id="nav">
@@ -118,20 +134,20 @@
     </header>
 
     <div class="legend">
-      <span class="legend__item"><i class="tag tag--yellow">Ejecución</i> Horas de trabajo</span>
-      <span class="legend__item"><i class="tag tag--coral">Entrega</i> Plazo al cliente</span>
-      <span class="legend__item"><i class="tag tag--violet">Propuestas</i> Alternativas incluidas</span>
+      <span class="legend__item"><span class="tag tag--yellow">Ejecución</span> Horas de trabajo</span>
+      <span class="legend__item"><span class="tag tag--coral">Entrega</span> Plazo al cliente</span>
+      <span class="legend__item"><span class="tag tag--violet">Propuestas</span> Alternativas incluidas</span>
     </div>
 
-    <div class="tabs" role="tablist">
-      <button class="tab is-active" data-tab="direccion">Dirección de proyectos</button>
-      <button class="tab" data-tab="branding">Branding</button>
-      <button class="tab" data-tab="web">Desarrollo Web</button>
-      <button class="tab" data-tab="marketing">Marketing Digital</button>
-      <button class="tab" data-tab="publicidad">Publicidad</button>
-      <button class="tab" data-tab="grafico">Diseño Gráfico</button>
-      <button class="tab" data-tab="audio">Audiovisual</button>
-      <button class="tab" data-tab="redaccion">Redacción</button>
+    <div class="tabs" role="tablist" aria-label="Categorías de servicios">
+      <button class="tab is-active" role="tab" aria-selected="true" aria-controls="direccion" id="tab-direccion" tabindex="0" data-tab="direccion">Dirección de proyectos</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="branding" id="tab-branding" tabindex="-1" data-tab="branding">Branding</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="web" id="tab-web" tabindex="-1" data-tab="web">Desarrollo Web</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="marketing" id="tab-marketing" tabindex="-1" data-tab="marketing">Marketing Digital</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="publicidad" id="tab-publicidad" tabindex="-1" data-tab="publicidad">Publicidad</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="grafico" id="tab-grafico" tabindex="-1" data-tab="grafico">Diseño Gráfico</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="audio" id="tab-audio" tabindex="-1" data-tab="audio">Audiovisual</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="redaccion" id="tab-redaccion" tabindex="-1" data-tab="redaccion">Redacción</button>
     </div>
 
     <!-- DIRECCIÓN DE PROYECTOS -->
@@ -772,18 +788,26 @@
         <li><strong>Horario</strong><span>Lun – Vie · 9:00 a 18:00</span></li>
       </ul>
     </div>
-    <form class="cta__form" id="ctaForm" novalidate>
+    <form class="cta__form" id="ctaForm" novalidate aria-label="Formulario de contacto">
       <div class="field">
-        <label for="name">Nombre</label>
-        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+        <label for="name">Nombre <span class="field__req" aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre"
+               required minlength="2" maxlength="80"
+               autocomplete="name"
+               aria-required="true" aria-describedby="name-err" />
+        <span class="field__error" id="name-err" aria-live="polite"></span>
       </div>
       <div class="field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
+        <label for="email">Email <span class="field__req" aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" placeholder="tu@empresa.com"
+               required maxlength="120"
+               autocomplete="email" inputmode="email"
+               aria-required="true" aria-describedby="email-err" />
+        <span class="field__error" id="email-err" aria-live="polite"></span>
       </div>
       <div class="field">
         <label for="service">Servicio de interés</label>
-        <select id="service" name="service">
+        <select id="service" name="service" autocomplete="off">
           <option>Dirección de proyectos</option>
           <option>Branding</option>
           <option>Desarrollo Web</option>
@@ -797,10 +821,13 @@
       </div>
       <div class="field">
         <label for="msg">Mensaje</label>
-        <textarea id="msg" name="msg" rows="4" placeholder="Cuéntanos brevemente tu proyecto"></textarea>
+        <textarea id="msg" name="msg" rows="4" maxlength="1200"
+                  placeholder="Cuéntanos brevemente tu proyecto"
+                  aria-describedby="msg-help"></textarea>
+        <span class="field__help" id="msg-help">Máximo 1200 caracteres.</span>
       </div>
       <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
-      <p class="form__status" id="formStatus" aria-live="polite"></p>
+      <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
