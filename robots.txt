@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Bots de IA permitidos explícitamente (citação em ChatGPT, Perplexity, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://ateriz.com/sitemap.xml

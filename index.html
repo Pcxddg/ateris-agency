@@ -1,884 +1,696 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt" data-base-lang="pt">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#111114" />
-<title>ATERIS — Agência de Marketing Digital | O tempo é ouro</title>
-<meta name="description" content="ATERIS é uma agência de marketing digital. Branding, desenvolvimento web, publicidade, audiovisual, design gráfico, redação e direção de projetos." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ATERIS — Agência de marketing digital | Todas as cartas sobre a mesa</title>
+<meta name="description" content="Branding, web, marketing e audiovisual sob um mesmo teto. Prazos, propostas e entregáveis claros antes de começar. Orçamento grátis em menos de 24h." />
+<link rel="canonical" href="https://ateriz.com/" />
 
-<!-- Open Graph -->
-<meta property="og:title" content="ATERIS — Agência de Marketing Digital" />
-<meta property="og:description" content="Branding, web, marketing, publicidade e mais. Todas as cartas sobre a mesa." />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content="pt_BR" />
-<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:title" content="ATERIS — Todas as cartas sobre a mesa" />
+<meta property="og:description" content="Agência de marketing digital com prazos, propostas e entregáveis claros antes de começar." />
+<meta property="og:image" content="https://ateriz.com/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
-
-<!-- Cloak: evita o flash de conteúdo em espanhol antes da troca para o idioma do usuário -->
-<style>html.i18n-cloak body { visibility: hidden; }</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
-<script>document.documentElement.classList.add('i18n-cloak');</script>
+<link rel="stylesheet" href="landing.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "ATERIS",
+  "description": "Agência de marketing digital.",
+  "email": "hola@ateris.agency",
+  "telephone": "+55 15 98803-3899",
+  "areaServed": ["BR", "LATAM"],
+  "availableLanguage": ["pt", "es"]
+}
+</script>
 </head>
 <body>
 
-<a href="#hero" class="skip-link">Saltar al contenido</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<a class="skip-link" href="#ctaForm">Pular para o formulário</a>
 
-<!-- NAV -->
+<!-- ════════════════════════ NAV ════════════════════════ -->
 <header class="nav" id="nav">
-  <div class="container nav__inner">
-    <a href="#hero" class="logo">
-      <span class="logo__dot"></span>
-      <span class="logo__name">ATERIS</span>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#hero" aria-label="ATERIS — início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30"><rect x="2" y="2" width="28" height="28" rx="9" fill="#ff6b6b"/><path d="M11 21l3.2-10h2.2L19.6 21h-2.3l-.7-2.4h-3.4L12.5 21H11zm2.7-4.2h2.3l-1.1-3.8-1.2 3.8z" fill="#fff"/></svg>
+      </span>
+      <span class="brand-name" data-no-i18n>ATERIS</span>
     </a>
-    <nav class="nav__links" id="navLinks">
-      <a href="#servicios">Servicios</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#documentacion">Documentación</a>
-      <a href="#porque">Por qué</a>
-      <a href="#contacto">Contacto</a>
-      <div class="lang-toggle" id="langToggle" role="group" aria-label="Idioma">
-        <button type="button" data-lang="es" class="is-active" aria-pressed="true">ES</button>
-        <button type="button" data-lang="pt" aria-pressed="false">PT</button>
-      </div>
-      <a href="#contacto" class="btn btn--primary btn--sm">Cotizar</a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <a href="#servicios" class="nav-link">Serviços</a>
+      <a href="#metodo" class="nav-link">Método</a>
+      <a href="#proceso" class="nav-link">Processo</a>
+      <a href="#faq" class="nav-link">Perguntas</a>
+      <a href="catalogo.html" class="nav-link nav-link-alt">Catálogo completo</a>
+      <a class="btn btn-wa nav-wa" href="https://wa.me/5515988033899?text=Ol%C3%A1%20ATERIS!%20Quero%20um%20or%C3%A7amento%20para%20meu%20projeto." id="waNav" rel="noopener noreferrer" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2"/></svg>
+        <span>Falar pelo WhatsApp</span>
+      </a>
     </nav>
-    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
-    </button>
+
+    <div class="nav-tools">
+      <div class="lang-toggle" role="group" aria-label="Idioma">
+        <button type="button" data-lang="pt" class="lang-btn is-active" aria-pressed="true" data-no-i18n>PT</button>
+        <button type="button" data-lang="es" class="lang-btn" aria-pressed="false" data-no-i18n>ES</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
+<main id="main">
+
+<!-- ════════════════════════ HERO ════════════════════════ -->
 <section class="hero" id="hero">
-  <div class="hero__bg">
-    <div class="hero__blob hero__blob--1"></div>
-    <div class="hero__blob hero__blob--2"></div>
-    <div class="hero__blob hero__blob--3"></div>
-  </div>
-  <div class="container hero__inner">
-    <div class="hero__copy">
-      <span class="eyebrow">Agencia de marketing digital</span>
-      <h1 class="hero__title">El tiempo es <span class="accent">oro</span>.</h1>
-      <p class="hero__lede">
-        El tiempo es un recurso limitado y sus clientes lo saben.
-        Dejemos de lado los caprichos y trabajemos de la mano con
-        <strong>todas las cartas sobre la mesa.</strong>
-      </p>
-      <div class="hero__cta">
-        <a href="#contacto" class="btn btn--primary">Empezar un proyecto</a>
-        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow reveal in">Agência de marketing digital</span>
+      <h1 class="display hero-h1 reveal in d1">Todas as cartas <em>sobre a mesa.</em></h1>
+      <p class="lede hero-lede reveal in d2">Branding, web, marketing e audiovisual sob um mesmo teto — com <strong>prazos, propostas e entregáveis claros</strong> antes de começar.</p>
+      <div class="hero-cta reveal in d3">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/5515988033899?text=Ol%C3%A1%20ATERIS!%20Quero%20um%20or%C3%A7amento%20para%20meu%20projeto." id="waHero" rel="noopener noreferrer" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2"/></svg>
+          <span>Falar pelo WhatsApp</span>
+        </a>
+        <a class="btn btn-outline btn-lg" href="#contacto">Orçar meu projeto</a>
       </div>
-      <ul class="hero__stats">
-        <li><strong>8</strong><span>áreas de servicio</span></li>
-        <li><strong>70+</strong><span>entregables definidos</span></li>
-        <li><strong>100%</strong><span>cartas sobre la mesa</span></li>
+      <p class="hero-micro reveal in d4">Orçamento grátis e sem compromisso · resposta em menos de 24h.</p>
+
+      <dl class="hero-stats reveal in d4">
+        <div class="stat">
+          <dt class="stat-num" data-count="8" data-no-i18n>0</dt>
+          <dd class="stat-label">áreas de serviço</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-num" data-count="70" data-suffix="+" data-no-i18n>0</dt>
+          <dd class="stat-label">entregáveis definidos</dd>
+        </div>
+        <div class="stat">
+          <dt class="stat-num" data-no-i18n>&lt;24h</dt>
+          <dd class="stat-label">tempo de resposta</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Cartas desplegadas -->
+    <div class="hero-cards reveal" aria-hidden="true">
+      <div class="deck">
+        <div class="play-card pc-3"><span class="suit">♣</span></div>
+        <div class="play-card pc-2"><span class="suit">♦</span></div>
+        <div class="play-card pc-1"><span class="suit">♥</span></div>
+      </div>
+      <div class="project-card">
+        <div class="pcard-top">
+          <span class="pcard-tag">Projeto</span>
+          <span class="pcard-status"><span class="dot-ok"></span>Aprovada</span>
+        </div>
+        <div class="pcard-title">Identidade + Site</div>
+        <div class="pcard-rows">
+          <div class="pcard-row">
+            <span class="pcard-k">Prazo acordado</span>
+            <span class="pcard-v">4 semanas</span>
+          </div>
+          <div class="pcard-row">
+            <span class="pcard-k">Entregáveis</span>
+            <span class="pcard-v">12 itens</span>
+          </div>
+          <div class="pcard-row">
+            <span class="pcard-k">Proposta</span>
+            <span class="pcard-v pcard-v-ok">Aprovada</span>
+          </div>
+        </div>
+        <div class="pcard-foot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>
+          Tudo definido antes de começar
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ STRIP ════════════════════════ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track" id="stripTrack">
+    <span>Direção de projetos</span><span class="strip-dot">✦</span>
+    <span>Branding</span><span class="strip-dot">✦</span>
+    <span>Desenvolvimento Web</span><span class="strip-dot">✦</span>
+    <span>Marketing Digital</span><span class="strip-dot">✦</span>
+    <span>Publicidade</span><span class="strip-dot">✦</span>
+    <span>Design Gráfico</span><span class="strip-dot">✦</span>
+    <span>Audiovisual</span><span class="strip-dot">✦</span>
+    <span>Redação</span><span class="strip-dot">✦</span>
+  </div>
+</div>
+
+<!-- ════════════════════════ MÉTODO ════════════════════════ -->
+<section class="section metodo" id="metodo">
+  <div class="wrap metodo-grid">
+    <div class="metodo-copy">
+      <span class="eyebrow reveal">Transparência total</span>
+      <h2 class="h2 reveal d1">Tudo claro desde o primeiro dia.</h2>
+      <p class="lede reveal d2">Na ATERIS você sabe o tempo, o prazo e o entregável de cada atividade antes de começar. Sem caprichos, sem surpresas.</p>
+    </div>
+    <div class="metodo-card reveal d2 assemble">
+      <div class="metodo-card-head">O que você sempre tem com a ATERIS</div>
+      <ul class="metodo-list">
+        <li>
+          <span class="mc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span><b>Prazos acordados</b><small>Datas reais combinadas por escrito.</small></span>
+        </li>
+        <li>
+          <span class="mc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+          <span><b>Prazo de entrega por atividade</b><small>Cada tarefa com seu tempo definido.</small></span>
+        </li>
+        <li>
+          <span class="mc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span><b>Zero surpresas</b><small>Sem custos ocultos na fatura.</small></span>
+        </li>
+        <li>
+          <span class="mc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg></span>
+          <span><b>Entregável tangível</b><small>Você recebe algo real, não promessas.</small></span>
+        </li>
       </ul>
     </div>
-    <div class="hero__visual" aria-hidden="true">
-      <div class="card card--float">
-        <div class="card__head">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="card__title">ATERIS · brief</span>
+  </div>
+</section>
+
+<!-- ════════════════════════ ASSEMBLE: MARCA ════════════════════════ -->
+<section class="section assemble-brand" id="marca">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Identidade</span>
+      <h2 class="h2">Sua marca, montada do zero.</h2>
+      <p class="lede">Cada peça no seu lugar, pronta para usar.</p>
+    </div>
+    <div class="brand-board assemble reveal">
+      <div class="bb-tile">
+        <span class="bb-label">Logo</span>
+        <div class="bb-logo-mark"><span data-no-i18n>A</span></div>
+      </div>
+      <div class="bb-tile">
+        <span class="bb-label">Cores</span>
+        <div class="bb-colors" data-no-i18n>
+          <i style="background:#ff6b6b"></i><i style="background:#ffd23f"></i><i style="background:#101014"></i><i style="background:#f6f3ee"></i>
         </div>
-        <div class="card__row"><span class="tag tag--yellow">Ejecución</span><b>4h</b></div>
-        <div class="card__row"><span class="tag tag--coral">Entrega</span><b>3 días</b></div>
-        <div class="card__row"><span class="tag tag--violet">Propuestas</span><b>3</b></div>
-        <div class="card__bar"><i style="width:78%"></i></div>
-        <small class="card__note">Estrategia · Planificación de actividades</small>
       </div>
-      <div class="card card--mini">
-        <span class="card__mini-label">Entregable</span>
-        <strong>Presentación</strong>
+      <div class="bb-tile">
+        <span class="bb-label">Tipografia</span>
+        <div class="bb-type"><b data-no-i18n>Aa<small>Bb</small></b></div>
+      </div>
+      <div class="bb-tile">
+        <span class="bb-label">Cartão</span>
+        <div class="bb-card">
+          <span class="cc-dot" data-no-i18n></span>
+          <div>
+            <div class="cc-name">Sua Marca</div>
+            <div class="cc-role">Diretor de arte</div>
+          </div>
+        </div>
+      </div>
+      <div class="bb-tile">
+        <span class="bb-label">Post social</span>
+        <div class="bb-post">Sua marca aqui</div>
+      </div>
+      <div class="bb-tile">
+        <span class="bb-label">Relatório de marca</span>
+        <div class="bb-stat" data-no-i18n>
+          <span class="ss-line w1"></span><span class="ss-line w2"></span><span class="ss-line w3"></span>
+        </div>
       </div>
     </div>
   </div>
-  <a href="#servicios" class="scroll-down" aria-label="Bajar">
-    <span></span>
-  </a>
 </section>
 
-<!-- MANIFIESTO STRIP -->
-<section class="strip">
-  <div class="strip__track">
-    <span>Branding</span><span>·</span>
-    <span>Desarrollo Web</span><span>·</span>
-    <span>Marketing Digital</span><span>·</span>
-    <span>Publicidad</span><span>·</span>
-    <span>Diseño Gráfico</span><span>·</span>
-    <span>Audiovisual</span><span>·</span>
-    <span>Redacción</span><span>·</span>
-    <span>Dirección de proyectos</span><span>·</span>
-    <span>Branding</span><span>·</span>
-    <span>Desarrollo Web</span><span>·</span>
-    <span>Marketing Digital</span><span>·</span>
-    <span>Publicidad</span><span>·</span>
-    <span>Diseño Gráfico</span><span>·</span>
-    <span>Audiovisual</span><span>·</span>
-    <span>Redacción</span><span>·</span>
-    <span>Dirección de proyectos</span><span>·</span>
+<!-- ════════════════════════ SERVIÇOS ════════════════════════ -->
+<section class="section servicios" id="servicios">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Serviços</span>
+      <h2 class="h2">Tudo o que sua marca precisa, sob um teto.</h2>
+      <p class="lede">Oito áreas de serviço que trabalham juntas — cada uma com entregáveis claros desde o início.</p>
+    </div>
+
+    <div class="svc-grid assemble reveal" id="svcGrid">
+      <!-- 1 Direção -->
+      <a class="svc-card" href="catalogo.html#direcao" data-tilt>
+        <div class="svc-prev pv-direcao" aria-hidden="true">
+          <div class="pv tl"><span></span><i style="width:72%"></i></div>
+          <div class="pv tl"><span></span><i style="width:52%"></i></div>
+          <div class="pv tl"><span></span><i style="width:64%"></i></div>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2.5"/></svg></span>
+          <h3 class="svc-title">Direção de projetos</h3>
+        </div>
+        <p class="svc-text">Um só ponto de contato para coordenar toda a sua marca.</p>
+        <div class="svc-tags"><span>Cronograma mestre</span><span>Acompanhamento</span><span>Relatórios</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 2 Branding -->
+      <a class="svc-card" href="catalogo.html#branding" data-tilt>
+        <div class="svc-prev pv-brand" aria-hidden="true">
+          <div class="pv bmark" data-no-i18n>A</div>
+          <div class="pv bsw"><i style="background:#ff6b6b"></i><i style="background:#ffd23f"></i><i style="background:#101014"></i></div>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+          <h3 class="svc-title">Branding</h3>
+        </div>
+        <p class="svc-text">Identidade que diferencia e fica na memória.</p>
+        <div class="svc-tags"><span>Logo</span><span>Manual de marca</span><span>Paleta</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 3 Web -->
+      <a class="svc-card" href="catalogo.html#web" data-tilt>
+        <div class="svc-prev pv-web" aria-hidden="true">
+          <div class="pv wbar"><b></b><b></b><b></b></div>
+          <div class="pv wbody"><span class="wl"></span><span class="wl s"></span><span class="wbtn"></span></div>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></span>
+          <h3 class="svc-title">Desenvolvimento Web</h3>
+        </div>
+        <p class="svc-text">Sites rápidos, claros e feitos para converter.</p>
+        <div class="svc-tags"><span>Responsivo</span><span>Velocidade</span><span>SEO base</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 4 Marketing -->
+      <a class="svc-card" href="catalogo.html#marketing" data-tilt>
+        <div class="svc-prev pv-chart" aria-hidden="true">
+          <i class="pv" style="height:30px"></i><i class="pv" style="height:48px"></i><i class="pv" style="height:38px"></i><i class="pv" style="height:60px"></i><i class="pv" style="height:74px"></i>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11v3a2 2 0 0 0 2 2h1l4 4V5L6 9H5a2 2 0 0 0-2 2z"/><path d="M15 8a4 4 0 0 1 0 8"/></svg></span>
+          <h3 class="svc-title">Marketing Digital</h3>
+        </div>
+        <p class="svc-text">Estratégia que traz clientes, não só curtidas.</p>
+        <div class="svc-tags"><span>Redes</span><span>Tráfego</span><span>Relatórios</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 5 Publicidade -->
+      <a class="svc-card" href="catalogo.html#publicidade" data-tilt>
+        <div class="svc-prev pv-ad" aria-hidden="true">
+          <div class="pv adcard"><span class="adimg"></span><span class="adcta"></span></div>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9v6h4l6 4V5L7 9H3z"/><path d="M17 6l3-2M18 12h3M17 18l3 2"/></svg></span>
+          <h3 class="svc-title">Publicidade</h3>
+        </div>
+        <p class="svc-text">Anúncios que falam com quem importa.</p>
+        <div class="svc-tags"><span>Meta &amp; Google</span><span>Segmentação</span><span>Orçamento</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 6 Design -->
+      <a class="svc-card" href="catalogo.html#design" data-tilt>
+        <div class="svc-prev pv-design" aria-hidden="true">
+          <span class="pv ds c1"></span><span class="pv ds c2"></span><span class="pv ds c3"></span>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><path d="M12 22a9 9 0 1 0-9-9c0 2 1 3 3 3h2a2 2 0 0 1 2 2c0 2 1 4 2 4z"/></svg></span>
+          <h3 class="svc-title">Design Gráfico</h3>
+        </div>
+        <p class="svc-text">Peças que comunicam com intenção.</p>
+        <div class="svc-tags"><span>Redes</span><span>Impressos</span><span>Apresentações</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 7 Audiovisual -->
+      <a class="svc-card" href="catalogo.html#audiovisual" data-tilt>
+        <div class="svc-prev pv-av" aria-hidden="true">
+          <span class="pv playbtn"></span>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg></span>
+          <h3 class="svc-title">Audiovisual</h3>
+        </div>
+        <p class="svc-text">Vídeo e foto que contam a sua história.</p>
+        <div class="svc-tags"><span>Vídeo</span><span>Edição</span><span>Fotografia</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+      <!-- 8 Redação -->
+      <a class="svc-card" href="catalogo.html#redacao" data-tilt>
+        <div class="svc-prev pv-text" aria-hidden="true">
+          <span class="pv tx"></span><span class="pv tx"></span><span class="pv tx s"></span>
+        </div>
+        <div class="svc-head">
+          <span class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20h16M5 16l9-9 3 3-9 9H5v-3z"/><path d="M13 6l3-3 3 3"/></svg></span>
+          <h3 class="svc-title">Redação</h3>
+        </div>
+        <p class="svc-text">Palavras que vendem sem gritar.</p>
+        <div class="svc-tags"><span>Copy de site</span><span>Roteiros</span><span>Redes</span></div>
+        <span class="svc-more">Ver detalhe →</span>
+      </a>
+    </div>
+
+    <div class="svc-foot reveal">
+      <a class="btn btn-dark btn-lg" href="catalogo.html">Ver catálogo completo</a>
+    </div>
   </div>
 </section>
 
-<!-- SERVICIOS -->
-<section class="services" id="servicios">
-  <div class="container">
-    <header class="section__head">
-      <span class="eyebrow">Servicios</span>
-      <h2>Todo lo que necesitas, en un solo lugar.</h2>
-      <p>Cada actividad con su tiempo de ejecución, plazo de entrega, propuestas incluidas y entregable. Sin caprichos. Sin sorpresas.</p>
-    </header>
-
-    <div class="legend">
-      <span class="legend__item"><span class="tag tag--yellow">Ejecución</span> Horas de trabajo</span>
-      <span class="legend__item"><span class="tag tag--coral">Entrega</span> Plazo al cliente</span>
-      <span class="legend__item"><span class="tag tag--violet">Propuestas</span> Alternativas incluidas</span>
+<!-- ════════════════════════ PROCESSO (dark) ════════════════════════ -->
+<section class="section proceso" id="proceso">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow on-dark">Processo</span>
+      <h2 class="h2">Quatro passos, sempre os mesmos.</h2>
     </div>
-
-    <div class="tabs" role="tablist" aria-label="Categorías de servicios">
-      <button class="tab is-active" role="tab" aria-selected="true" aria-controls="direccion" id="tab-direccion" tabindex="0" data-tab="direccion">Dirección de proyectos</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="branding" id="tab-branding" tabindex="-1" data-tab="branding">Branding</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="web" id="tab-web" tabindex="-1" data-tab="web">Desarrollo Web</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="marketing" id="tab-marketing" tabindex="-1" data-tab="marketing">Marketing Digital</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="publicidad" id="tab-publicidad" tabindex="-1" data-tab="publicidad">Publicidad</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="grafico" id="tab-grafico" tabindex="-1" data-tab="grafico">Diseño Gráfico</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="audio" id="tab-audio" tabindex="-1" data-tab="audio">Audiovisual</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="redaccion" id="tab-redaccion" tabindex="-1" data-tab="redaccion">Redacción</button>
-    </div>
-
-    <!-- DIRECCIÓN DE PROYECTOS -->
-    <article class="panel is-active" id="direccion">
-      <div class="panel__head">
-        <h3>Dirección de proyectos</h3>
-        <p>Análisis, estrategia e informes para que cada decisión esté respaldada por datos.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Análisis de marca</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Situación actual de la marca</td><td>Presentación</td></tr>
-            <tr><td>Estrategia</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Planificación de actividades</td><td>Presentación</td></tr>
-            <tr><td>Informe</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Analytics, Adwords, Social Media, Actividades</td><td>Presentación</td></tr>
-            <tr><td>Asesoría / Consultas</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">—</span></td><td>Activación de plataformas, asesorías técnicas, análisis</td><td>—</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- BRANDING -->
-    <article class="panel" id="branding">
-      <div class="panel__head">
-        <h3>Branding</h3>
-        <p>De la idea al manual de marca. Identidad coherente, memorable y aplicable.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Concepto de marca</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Definir estilo y comunicación</td><td>Presentación</td></tr>
-            <tr><td>Storytelling</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Slogan, story, nombre de story, frases ancla</td><td>PDF</td></tr>
-            <tr><td>Moodboard</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Presentación de referencias visuales</td><td>PDF</td></tr>
-            <tr><td>Naming</td><td><span class="pill pill--yellow">7h</span></td><td><span class="pill pill--coral">4 días</span></td><td><span class="pill pill--violet">3</span></td><td>Nombres viables de registro</td><td>Presentación</td></tr>
-            <tr><td>Logotipo</td><td><span class="pill pill--yellow">13h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">3</span></td><td>Diseño de logotipo</td><td>Presentación</td></tr>
-            <tr><td>Guía de estilo</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Guía rápida para el uso de la marca</td><td>Online</td></tr>
-            <tr><td>Pack de íconos</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Pack de 10 íconos en formatos EPS y SVG</td><td>PDF</td></tr>
-            <tr><td>Brandbook PDF</td><td><span class="pill pill--yellow">8h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Manual de identidad</td><td>PDF</td></tr>
-            <tr><td>Aplicaciones</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">3</span></td><td>Por aplicación</td><td>Editable</td></tr>
-            <tr><td>Brandbook web</td><td><span class="pill pill--yellow">20h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Brandbook web con accesos al cliente</td><td>Online</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- DESARROLLO WEB -->
-    <article class="panel" id="web">
-      <div class="panel__head">
-        <h3>Desarrollo Web</h3>
-        <p>Sitios y ecommerce: UX, diseño, programación, seguridad y capacitación.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Experiencia del usuario UX</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido de 5 secciones (5 escenas por sección)</td><td>PDF</td></tr>
-            <tr><td>Diseño de interfaz UI</td><td><span class="pill pill--yellow">20h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Diseño de 5 secciones (5 escenas por sección)</td><td>JPG</td></tr>
-            <tr><td>Instalación</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Configuración de correos y servidor FTP</td><td>Online</td></tr>
-            <tr><td>Programación</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Programación de 5 secciones (5 escenas por sección)</td><td>Online</td></tr>
-            <tr><td>Sitio móvil</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Programación de 5 secciones (5 escenas por sección)</td><td>Online</td></tr>
-            <tr><td>Ecommerce</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Configuración WooCommerce</td><td>Online</td></tr>
-            <tr><td>Optimización</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Optimización del sistema y entrega</td><td>Online</td></tr>
-            <tr><td>Migración de web</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Migración de sitio</td><td>Online</td></tr>
-            <tr><td>Planeación de web</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Estructura y funcionalidad de front end</td><td>Online</td></tr>
-            <tr><td>Consultas e investigaciones web</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Asesoría técnica</td><td>Presentación</td></tr>
-            <tr><td>Capacitación publicación / contenido</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Capacitación presencial o videoconferencia</td><td>Online</td></tr>
-            <tr><td>Capacitación carga de producto</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Capacitación presencial o videoconferencia</td><td>Online</td></tr>
-            <tr><td>Seguridad del sitio</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Seguridad del sitio</td><td>Online</td></tr>
-            <tr><td>Manual de carga de producto</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido, corrección de estilo y diseño</td><td>PDF</td></tr>
-            <tr><td>Manual de publicación post / contenido</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido, corrección de estilo y diseño</td><td>PDF</td></tr>
-            <tr><td>Automatizaciones</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Mailchimp · CRM · Zapier</td><td>Online</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- MARKETING DIGITAL -->
-    <article class="panel" id="marketing">
-      <div class="panel__head">
-        <h3>Marketing Digital</h3>
-        <p>Contenido, redes, email y automatización. Conversa con tu audiencia con consistencia.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Parrilla de contenidos mensual</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Planeación de 12 contenidos con referencia</td><td>Online</td></tr>
-            <tr><td>Look &amp; Feel</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>Portada y cover (redes sociales)</td><td>Online</td></tr>
-            <tr><td>Community Manager</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">30 días</span></td><td><span class="pill pill--violet">1</span></td><td>Administración de 12 contenidos</td><td>Online</td></tr>
-            <tr><td>Manual de atención al cliente</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Formato PDF</td><td>PDF</td></tr>
-            <tr><td>Newsletter</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Template de Mailchimp</td><td>Online</td></tr>
-            <tr><td>Artículo / comunicado</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo una cuartilla, diseño y contenido</td><td>Online</td></tr>
-            <tr><td>Ebook</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 2 páginas</td><td>PDF</td></tr>
-            <tr><td>Landing page</td><td><span class="pill pill--yellow">8h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 4 escenas</td><td>Online</td></tr>
-            <tr><td>Video (30 seg)</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y postproducción</td><td>MP4</td></tr>
-            <tr><td>Animación (30 seg)</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Diseño, animación y musicalización</td><td>MP4</td></tr>
-            <tr><td>Traducción</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 1 cuartilla</td><td>Editable</td></tr>
-            <tr><td>Podcast (15 min)</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Copy, grabación y edición</td><td>MP4</td></tr>
-            <tr><td>Streaming (15 min)</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y postproducción</td><td>MP4</td></tr>
-            <tr><td>Arte JPG</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido y diseño</td><td>JPG</td></tr>
-            <tr><td>Canva, secuencia</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Contenido y diseño</td><td>JPG</td></tr>
-            <tr><td>Infografía</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Máximo 1 página carta</td><td>JPG</td></tr>
-            <tr><td>Infografía animada (20 seg)</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Diseño, animación y musicalización</td><td>MP4</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- PUBLICIDAD -->
-    <article class="panel" id="publicidad">
-      <div class="panel__head">
-        <h3>Publicidad</h3>
-        <p>Conceptos creativos que viajan a cualquier formato.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Concepto de campaña</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Estrategia y planeación</td><td>Presentación</td></tr>
-            <tr><td>Gráfico maestro</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">3</span></td><td>Carta, billboard, social media y POP</td><td>Presentación</td></tr>
-            <tr><td>Aplicaciones</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">3</span></td><td>Por aplicación</td><td>Editable</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- DISEÑO GRÁFICO -->
-    <article class="panel" id="grafico">
-      <div class="panel__head">
-        <h3>Diseño Gráfico</h3>
-        <p>Piezas impresas y digitales con corrección de estilo y diseño cuidado.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Etiqueta de producto</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">3</span></td><td>Formato máximo 1/3 carta</td><td>Editable</td></tr>
-            <tr><td>Empaque</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">3</span></td><td>Previsualización tipo render</td><td>JPG</td></tr>
-            <tr><td>Plano mecánico</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Planos para impresión</td><td>Editable</td></tr>
-            <tr><td>Brochure / catálogo / revista</td><td><span class="pill pill--yellow">5h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño (4 páginas)</td><td>Editable</td></tr>
-            <tr><td>Presentación PowerPoint</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño (por diapositiva)</td><td>Editable</td></tr>
-            <tr><td>Escaparate</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Editable</td></tr>
-            <tr><td>Stand 3×3</td><td><span class="pill pill--yellow">12h</span></td><td><span class="pill pill--coral">4 días</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Editable</td></tr>
-            <tr><td>Exhibidor 1×1</td><td><span class="pill pill--yellow">8h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Online</td></tr>
-            <tr><td>Banner display</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Previsualización tipo render</td><td>Editable</td></tr>
-            <tr><td>Lona publicitaria</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
-            <tr><td>Tríptico</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
-            <tr><td>Flyer</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
-            <tr><td>Infografía (1 carta)</td><td><span class="pill pill--yellow">4h</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección de estilo y diseño</td><td>Editable</td></tr>
-            <tr><td>Retoque fotográfico</td><td><span class="pill pill--yellow">0.3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Corrección y calibración de color</td><td>JPG</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- AUDIOVISUAL -->
-    <article class="panel" id="audio">
-      <div class="panel__head">
-        <h3>Audiovisual</h3>
-        <p>Video, foto y animación. Producción y post producción de alta calidad.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Animación (1 min)</td><td><span class="pill pill--yellow">26h</span></td><td><span class="pill pill--coral">16 días</span></td><td><span class="pill pill--violet">1</span></td><td>Render, diseño, animación y musicalización</td><td>MP4</td></tr>
-            <tr><td>Video corporativo (1 min)</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y post producción</td><td>MP4</td></tr>
-            <tr><td>Foto producto</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y post producción (3 vistas)</td><td>JPG</td></tr>
-            <tr><td>Foto bodegón</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Producción y post producción</td><td>JPG</td></tr>
-            <tr><td>Foto instalaciones</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>4 hr de cobertura y 2 hr de edición</td><td>JPG</td></tr>
-            <tr><td>Foto publicitaria</td><td><span class="pill pill--yellow">12h</span></td><td><span class="pill pill--coral">10 días</span></td><td><span class="pill pill--violet">1</span></td><td>8 hr de sesión y 4 de edición</td><td>JPG</td></tr>
-            <tr><td>Foto evento</td><td><span class="pill pill--yellow">6h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>4 hr de cobertura y 2 hr de edición</td><td>JPG</td></tr>
-            <tr><td>Voz Off (1 min)</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Grabación de voz, limpieza de audio</td><td>MP4</td></tr>
-            <tr><td>Retoque 3D</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">4</span></td><td>Fotografías con volumen (fondo blanco, ecommerce)</td><td>JPG</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-    <!-- REDACCIÓN -->
-    <article class="panel" id="redaccion">
-      <div class="panel__head">
-        <h3>Redacción</h3>
-        <p>Palabras que comunican: guiones, boletines, descripciones y experiencia conversacional.</p>
-      </div>
-      <div class="table-wrap">
-        <table class="svc">
-          <thead>
-            <tr><th>Actividad</th><th>Ejecución</th><th>Entrega</th><th>Propuestas</th><th>Descripción</th><th>Entregable</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Guión de radio (30 seg)</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla</td><td>PDF</td></tr>
-            <tr><td>Guión corporativo (1 min)</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla</td><td>PDF</td></tr>
-            <tr><td>Boletines informativos</td><td><span class="pill pill--yellow">2h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla (notas breves)</td><td>PDF</td></tr>
-            <tr><td>Lineamientos de comunicación</td><td><span class="pill pill--yellow">10h</span></td><td><span class="pill pill--coral">5 días</span></td><td><span class="pill pill--violet">1</span></td><td>Comunicación escrita y visual de marca</td><td>PDF</td></tr>
-            <tr><td>Traducciones</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>Traducción por hoja o sección de web</td><td>PDF</td></tr>
-            <tr><td>Descripción de producto</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">10</span></td><td>Características de producto para web</td><td>PDF</td></tr>
-            <tr><td>Corrección de estilo</td><td><span class="pill pill--yellow">1h</span></td><td><span class="pill pill--coral">1 día</span></td><td><span class="pill pill--violet">1</span></td><td>1 cuartilla</td><td>PDF</td></tr>
-            <tr><td>Desarrollo de chatbot</td><td><span class="pill pill--yellow">3h</span></td><td><span class="pill pill--coral">3 días</span></td><td><span class="pill pill--violet">1</span></td><td>Análisis y listado de chats automáticos (WhatsApp, Messenger, web chat)</td><td>PDF</td></tr>
-            <tr><td>UX Writing</td><td><span class="pill pill--yellow">—</span></td><td><span class="pill pill--coral">2 días</span></td><td><span class="pill pill--violet">1</span></td><td>Experiencia de usuario para automatizaciones + análisis</td><td>PDF</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- PROCESO -->
-<section class="process" id="proceso">
-  <div class="container">
-    <header class="section__head section__head--light">
-      <span class="eyebrow">Cómo trabajamos</span>
-      <h2>Cuatro pasos, todas las cartas sobre la mesa.</h2>
-      <p>Cada proyecto avanza con tiempos y entregables claros. Sin sorpresas, sin caprichos.</p>
-    </header>
-    <ol class="steps">
-      <li class="step">
-        <span class="step__num">01</span>
-        <h3>Análisis</h3>
-        <p>Diagnóstico de marca, mercado y datos. Punto de partida realista.</p>
+    <ol class="proc-steps">
+      <li class="proc-step reveal">
+        <span class="proc-n" data-no-i18n>01</span>
+        <h3 class="proc-title">Análise</h3>
+        <p class="proc-text">Entendemos seu negócio, suas metas e seu prazo.</p>
       </li>
-      <li class="step">
-        <span class="step__num">02</span>
-        <h3>Estrategia</h3>
-        <p>Planificación de actividades con tiempos, propuestas y entregables.</p>
+      <li class="proc-step reveal d1">
+        <span class="proc-n" data-no-i18n>02</span>
+        <h3 class="proc-title">Estratégia</h3>
+        <p class="proc-text">Definimos o plano, os entregáveis e os tempos.</p>
       </li>
-      <li class="step">
-        <span class="step__num">03</span>
-        <h3>Ejecución</h3>
-        <p>Producción de cada pieza con horas y plazos previamente acordados.</p>
+      <li class="proc-step reveal d2">
+        <span class="proc-n" data-no-i18n>03</span>
+        <h3 class="proc-title">Execução</h3>
+        <p class="proc-text">Colocamos a equipe a trabalhar com prazos acordados.</p>
       </li>
-      <li class="step">
-        <span class="step__num">04</span>
-        <h3>Informe</h3>
-        <p>Resultados medibles: Analytics, Ads, Social Media y siguientes pasos.</p>
+      <li class="proc-step reveal d3">
+        <span class="proc-n" data-no-i18n>04</span>
+        <h3 class="proc-title">Relatório</h3>
+        <p class="proc-text">Mostramos resultados medíveis, sem letras miúdas.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- POR QUÉ -->
-<section class="why" id="porque">
-  <div class="container why__grid">
-    <div class="why__copy">
-      <span class="eyebrow">Por qué ATERIS</span>
-      <h2>Procesos claros. Entregables tangibles.</h2>
-      <p class="why__lede">No vendemos promesas: cada actividad tiene horas de ejecución, plazo de entrega, número de propuestas y formato del entregable. Tú decides, nosotros ejecutamos.</p>
-      <a href="#contacto" class="btn btn--primary">Conversemos</a>
+<!-- ════════════════════════ SCROLL BUILD ════════════════════════ -->
+<section class="section build" id="construir">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Como montamos</span>
+      <h2 class="h2">Seu projeto, montado passo a passo.</h2>
+      <p class="lede">Da primeira conversa ao relatório final — você vê tudo sendo construído.</p>
     </div>
-    <ul class="why__list">
-      <li>
-        <div class="why__icon">⏱</div>
-        <h4>Tiempos pactados</h4>
-        <p>Cada entregable con horas y plazo definidos desde el día uno.</p>
-      </li>
-      <li>
-        <div class="why__icon">◎</div>
-        <h4>Propuestas reales</h4>
-        <p>Alternativas tangibles para que elijas con criterio, no con corazonadas.</p>
-      </li>
-      <li>
-        <div class="why__icon">⚙</div>
-        <h4>Equipo integral</h4>
-        <p>Branding, web, contenido, publicidad y audiovisual bajo un solo techo.</p>
-      </li>
-      <li>
-        <div class="why__icon">↗</div>
-        <h4>Resultados medibles</h4>
-        <p>Informes con Analytics, Adwords, Social Media y siguientes pasos.</p>
-      </li>
-    </ul>
   </div>
-</section>
 
-<!-- DOCUMENTACIÓN DETALLADA — MARKETING DIGITAL -->
-<section class="docs" id="documentacion">
-  <div class="container">
-    <header class="section__head">
-      <span class="eyebrow">Documentación</span>
-      <h2>ATERIS Marketing Digital — Manual operativo</h2>
-      <p>Aquí explicamos a fondo cómo trabajamos cada pieza del área de Marketing Digital: qué hacemos, cómo lo hacemos, qué entregamos y qué resultados puedes esperar.</p>
-    </header>
+  <div class="build-track" id="buildTrack">
+    <div class="wrap build-stage">
+      <div class="build-steps">
+        <div class="build-progress" aria-hidden="true"><div class="build-progress-fill" id="buildFill"></div></div>
+        <div class="build-step active" data-step="0">
+          <span class="bstep-n" data-no-i18n>01</span>
+          <h3>Análise</h3>
+          <p>Briefing e metas</p>
+        </div>
+        <div class="build-step" data-step="1">
+          <span class="bstep-n" data-no-i18n>02</span>
+          <h3>Estratégia</h3>
+          <p>Plano e canais</p>
+        </div>
+        <div class="build-step" data-step="2">
+          <span class="bstep-n" data-no-i18n>03</span>
+          <h3>Execução</h3>
+          <p>Entregáveis em produção</p>
+        </div>
+        <div class="build-step" data-step="3">
+          <span class="bstep-n" data-no-i18n>04</span>
+          <h3>Relatório</h3>
+          <p>Resultados medíveis</p>
+        </div>
+      </div>
 
-    <div class="kpi-grid">
-      <div class="kpi"><strong>12</strong><span>contenidos / mes</span></div>
-      <div class="kpi"><strong>30</strong><span>días de gestión</span></div>
-      <div class="kpi"><strong>17</strong><span>tipos de entregable</span></div>
-      <div class="kpi"><strong>4</strong><span>canales activados</span></div>
-    </div>
-
-    <div class="docs__layout">
-      <aside class="docs__toc">
-        <h5>Contenido</h5>
-        <ul>
-          <li><a href="#doc-intro" class="is-active">Filosofía</a></li>
-          <li><a href="#doc-flujo">Flujo de trabajo</a></li>
-          <li><a href="#doc-parrilla">Parrilla mensual</a></li>
-          <li><a href="#doc-lookfeel">Look &amp; Feel</a></li>
-          <li><a href="#doc-cm">Community Manager</a></li>
-          <li><a href="#doc-atc">Atención al cliente</a></li>
-          <li><a href="#doc-news">Newsletter</a></li>
-          <li><a href="#doc-articulo">Artículo / comunicado</a></li>
-          <li><a href="#doc-ebook">Ebook</a></li>
-          <li><a href="#doc-landing">Landing page</a></li>
-          <li><a href="#doc-video">Video y animación</a></li>
-          <li><a href="#doc-podcast">Podcast / Streaming</a></li>
-          <li><a href="#doc-traduccion">Traducción</a></li>
-          <li><a href="#doc-arte">Arte, Canva, Infografía</a></li>
-          <li><a href="#doc-medicion">Medición e informes</a></li>
-          <li><a href="#doc-faq">Preguntas frecuentes</a></li>
-        </ul>
-      </aside>
-
-      <div class="docs__content">
-
-        <section id="doc-intro">
-          <h3>1. Filosofía del área</h3>
-          <p>El marketing digital de ATERIS parte de una premisa simple: <strong>el tiempo es oro</strong>. Cada acción que tomamos en una marca cuesta horas, presupuesto y oportunidad. Por eso documentamos todo: tiempos de ejecución, plazos de entrega, número de propuestas y formato del entregable.</p>
-          <blockquote>“Dejemos de lado los caprichos y trabajemos de la mano con todas las cartas sobre la mesa.”</blockquote>
-          <p>El área se sostiene sobre cuatro principios:</p>
-          <ul>
-            <li><strong>Planeación primero:</strong> ninguna pieza sale al aire sin estar dentro de una parrilla mensual aprobada.</li>
-            <li><strong>Consistencia visual:</strong> todo respeta el Look &amp; Feel y la guía de marca acordada.</li>
-            <li><strong>Datos antes que opiniones:</strong> cada decisión se valida con métricas y se reporta en el informe mensual.</li>
-            <li><strong>Tiempos pactados:</strong> tú sabes cuánto tarda cada cosa antes de empezar.</li>
-          </ul>
-        </section>
-
-        <section id="doc-flujo">
-          <h3>2. Flujo de trabajo mensual</h3>
-          <p>Así se ve un mes operativo en ATERIS Marketing Digital:</p>
-          <div class="flow">
-            <div class="flow__step"><b>Día 1–2</b><span>Parrilla mensual</span></div>
-            <div class="flow__step"><b>Día 3–5</b><span>Producción de piezas</span></div>
-            <div class="flow__step"><b>Día 6–8</b><span>Revisión y aprobación</span></div>
-            <div class="flow__step"><b>Día 9–30</b><span>Publicación + community</span></div>
-            <div class="flow__step"><b>Día 30</b><span>Informe + cierre</span></div>
+      <div class="build-canvas" aria-hidden="true">
+        <!-- 01 Briefing -->
+        <div class="bc-layer on" data-layer="0">
+          <div class="bld-brief">
+            <div class="bld-row"><span class="bld-k">Cliente</span><span class="bld-v" data-no-i18n>Loja de café</span></div>
+            <div class="bld-row"><span class="bld-k">Meta</span><span class="bld-v">Mais vendas online</span></div>
+            <div class="bld-row"><span class="bld-k">Prazo</span><span class="bld-v" data-no-i18n>8 semanas</span></div>
+            <div class="bld-row"><span class="bld-k">Briefing</span><span class="bld-v" data-no-i18n>✓</span></div>
           </div>
-          <p>Cada etapa tiene responsable, plazo y entregable definido. Si una pieza requiere cambios, se gestionan dentro de los tiempos previstos para no romper el calendario.</p>
-        </section>
-
-        <section id="doc-parrilla">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Parrilla de contenidos mensual</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">2h</span>
-                <span class="pill pill--coral">2 días</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
+        </div>
+        <!-- 02 Plano -->
+        <div class="bc-layer" data-layer="1">
+          <div class="bld-plan">
+            <div class="bld-plan-h">Plano de ação</div>
+            <div class="bld-bar"><span>Branding</span><i style="--w:72%"></i></div>
+            <div class="bld-bar"><span>Desenvolvimento Web</span><i style="--w:88%"></i></div>
+            <div class="bld-bar"><span>Marketing Digital</span><i style="--w:64%"></i></div>
+            <div class="bld-bar"><span>Publicidade</span><i style="--w:80%"></i></div>
+          </div>
+        </div>
+        <!-- 03 Entregáveis -->
+        <div class="bc-layer" data-layer="2">
+          <div class="bld-grid">
+            <div class="bld-pill"><span class="bld-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg></span>Branding</div>
+            <div class="bld-pill"><span class="bld-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg></span>Desenvolvimento Web</div>
+            <div class="bld-pill"><span class="bld-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg></span>Marketing Digital</div>
+            <div class="bld-pill"><span class="bld-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg></span>Audiovisual</div>
+            <div class="bld-pill"><span class="bld-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg></span>Design Gráfico</div>
+            <div class="bld-pill"><span class="bld-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg></span>Redação</div>
+          </div>
+        </div>
+        <!-- 04 Relatório -->
+        <div class="bc-layer" data-layer="3">
+          <div class="bld-report">
+            <div class="bld-kpis">
+              <div class="bld-kpi"><b data-no-i18n>+142%</b><span>Alcance</span></div>
+              <div class="bld-kpi"><b data-no-i18n>320</b><span>Leads</span></div>
+              <div class="bld-kpi"><b data-no-i18n>4.8%</b><span>Conversão</span></div>
             </div>
-            <p><strong>Qué es.</strong> Planeación de 12 contenidos para el mes con referencia visual y de copy. Es el documento maestro del área.</p>
-            <p><strong>Qué incluye:</strong></p>
-            <ul>
-              <li>Calendario con fecha y hora de publicación por pieza.</li>
-              <li>Canal (Instagram, Facebook, LinkedIn, TikTok, X, web).</li>
-              <li>Objetivo de la pieza (awareness, engagement, conversión, recordación).</li>
-              <li>Copy completo, hashtags y referencia visual.</li>
-              <li>Etiqueta de campaña o pilar de contenido.</li>
-            </ul>
-            <p><strong>Entregable:</strong> tablero online editable (Notion / Google Sheets / Trello).</p>
-          </div>
-        </section>
-
-        <section id="doc-lookfeel">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Look &amp; Feel de redes sociales</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">2h</span>
-                <span class="pill pill--coral">10 días</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
+            <div class="bld-chart">
+              <i style="--h:50px"></i><i style="--h:78px"></i><i style="--h:68px"></i><i style="--h:106px"></i><i style="--h:128px"></i><i style="--h:150px"></i>
             </div>
-            <p><strong>Qué es.</strong> Definimos portada, cover, plantillas de feed y estilo visual unificado para que tu marca se vea siempre coherente.</p>
-            <ul>
-              <li>Portadas y banners (Facebook, LinkedIn, X, YouTube).</li>
-              <li>Plantillas de feed (3–5 estilos rotables).</li>
-              <li>Plantilla de historia y reel.</li>
-              <li>Set de íconos y elementos gráficos reutilizables.</li>
-            </ul>
-            <p><strong>Entregable:</strong> kit online con archivos editables.</p>
-          </div>
-        </section>
-
-        <section id="doc-cm">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Community Manager</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">2h / día</span>
-                <span class="pill pill--coral">30 días</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
+            <div class="bld-report-foot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg>
+              Resultados em 8 semanas
             </div>
-            <p><strong>Qué es.</strong> Administración integral de 12 contenidos al mes: publicación, monitoreo, interacción y reportes.</p>
-            <ul>
-              <li><strong>Publicación:</strong> calendarización y subida en tiempo y forma.</li>
-              <li><strong>Moderación:</strong> respuesta a comentarios y mensajes en horario hábil.</li>
-              <li><strong>Crisis básica:</strong> escalado al cliente con protocolo definido.</li>
-              <li><strong>Monitoreo:</strong> menciones, etiquetas y palabras clave de marca.</li>
-            </ul>
-            <p><strong>Entregable:</strong> tablero online con métricas semanales + informe mensual.</p>
           </div>
-        </section>
-
-        <section id="doc-atc">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Manual de atención al cliente</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">2h</span>
-                <span class="pill pill--coral">1 día</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p><strong>Qué es.</strong> Documento PDF con respuestas tipo, tono de voz, casos críticos y árbol de decisión para que cualquier persona del equipo responda como la marca.</p>
-            <p><strong>Entregable:</strong> PDF descargable + plantillas de respuesta.</p>
-          </div>
-        </section>
-
-        <section id="doc-news">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Newsletter</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">3h</span>
-                <span class="pill pill--coral">1 día</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p><strong>Qué es.</strong> Template de email diseñado y armado en Mailchimp (o plataforma equivalente) listo para enviarse.</p>
-            <ul>
-              <li>Diseño responsive (móvil + escritorio).</li>
-              <li>Bloques reutilizables para futuras campañas.</li>
-              <li>Configuración de listas y segmentos básicos.</li>
-              <li>Pruebas A/B opcionales en asunto.</li>
-            </ul>
-            <p><strong>Entregable:</strong> campaña online lista para programarse.</p>
-          </div>
-        </section>
-
-        <section id="doc-articulo">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Artículo / comunicado</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">2h</span>
-                <span class="pill pill--coral">1 día</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p>Máximo una cuartilla, diseño y contenido. Ideal para notas de blog, comunicados de prensa o anuncios oficiales.</p>
-            <ul>
-              <li>Investigación breve y verificación de datos.</li>
-              <li>Redacción, corrección de estilo y SEO básico.</li>
-              <li>Diseño de cabecera y maquetación web.</li>
-            </ul>
-            <p><strong>Entregable:</strong> artículo publicado online o documento listo para publicar.</p>
-          </div>
-        </section>
-
-        <section id="doc-ebook">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Ebook</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">4h</span>
-                <span class="pill pill--coral">2 días</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p>Pieza de hasta 2 páginas pensada como lead magnet o material descargable de alto valor.</p>
-            <ul>
-              <li>Estructura editorial (intro, desarrollo, CTA).</li>
-              <li>Diseño visual con identidad de marca.</li>
-              <li>Optimización para descarga (PDF ligero, hipervínculos).</li>
-            </ul>
-            <p><strong>Entregable:</strong> PDF.</p>
-          </div>
-        </section>
-
-        <section id="doc-landing">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Landing page</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">8h</span>
-                <span class="pill pill--coral">3 días</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p>Máximo 4 escenas, enfocada en conversión. Cada escena tiene un objetivo específico:</p>
-            <ul>
-              <li><strong>Hero:</strong> propuesta de valor + CTA principal.</li>
-              <li><strong>Beneficios:</strong> 3 a 5 puntos clave.</li>
-              <li><strong>Prueba social:</strong> testimonios, logos o casos.</li>
-              <li><strong>Cierre:</strong> formulario o CTA final.</li>
-            </ul>
-            <p><strong>Entregable:</strong> landing online con tracking básico (Analytics + píxel).</p>
-          </div>
-        </section>
-
-        <section id="doc-video">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Video y animación (30 seg)</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">3–4h</span>
-                <span class="pill pill--coral">1–5 días</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p>Producimos dos formatos de pieza corta:</p>
-            <ul>
-              <li><strong>Video (30 seg):</strong> producción y postproducción con material real o stock. Ideal para reels, ads y testimoniales cortos.</li>
-              <li><strong>Animación (30 seg):</strong> diseño, animación y musicalización. Perfecta para explicar conceptos o anunciar promociones.</li>
-              <li><strong>Infografía animada (20 seg):</strong> diseño, animación y musicalización de datos clave.</li>
-            </ul>
-            <p><strong>Entregable:</strong> archivo MP4 optimizado para cada red social.</p>
-          </div>
-        </section>
-
-        <section id="doc-podcast">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Podcast y Streaming (15 min)</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">2–4h</span>
-                <span class="pill pill--coral">1 día</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <ul>
-              <li><strong>Podcast (15 min):</strong> copy, grabación y edición. Producimos el episodio listo para subir a Spotify / Apple Podcasts / YouTube.</li>
-              <li><strong>Streaming (15 min):</strong> producción y postproducción de transmisiones en vivo (escenografía digital, gráficos, edición de la grabación).</li>
-            </ul>
-            <p><strong>Entregable:</strong> MP4 o MP3 final + miniaturas y copy de publicación.</p>
-          </div>
-        </section>
-
-        <section id="doc-traduccion">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Traducción</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">1h</span>
-                <span class="pill pill--coral">1 día</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <p>Hasta una cuartilla por unidad. Traducción profesional, no automática, con localización al mercado objetivo.</p>
-            <p><strong>Entregable:</strong> documento editable.</p>
-          </div>
-        </section>
-
-        <section id="doc-arte">
-          <div class="doc-card">
-            <div class="doc-card__head">
-              <h4>Arte JPG, Canva y Infografía</h4>
-              <div class="doc-card__meta">
-                <span class="pill pill--yellow">1–3h</span>
-                <span class="pill pill--coral">1 día</span>
-                <span class="pill pill--violet">1 propuesta</span>
-              </div>
-            </div>
-            <ul>
-              <li><strong>Arte JPG:</strong> contenido y diseño de una pieza individual para redes.</li>
-              <li><strong>Canva, secuencia:</strong> carrusel o secuencia de piezas (ideal para storytelling).</li>
-              <li><strong>Infografía:</strong> hasta 1 página carta. Datos, procesos o comparativas visualizadas.</li>
-            </ul>
-            <p><strong>Entregable:</strong> JPG optimizado para cada red.</p>
-          </div>
-        </section>
-
-        <section id="doc-medicion">
-          <h3>3. Medición e informes</h3>
-          <p>Todo lo que producimos se mide. Cada mes recibes un informe con:</p>
-          <ul>
-            <li><strong>Analytics:</strong> tráfico, fuentes, comportamiento y conversiones del sitio.</li>
-            <li><strong>Adwords:</strong> inversión, impresiones, clics, CPC y conversiones por campaña.</li>
-            <li><strong>Social Media:</strong> alcance, engagement, crecimiento y mejores piezas.</li>
-            <li><strong>Actividades:</strong> qué se hizo, qué se publicará y qué decisiones tomar el próximo mes.</li>
-          </ul>
-          <p>El informe es una <strong>presentación</strong> que se revisa contigo en sesión de 60 minutos. No es un PDF que se manda y se olvida: es una conversación con datos al frente.</p>
-        </section>
-
-        <section id="doc-faq">
-          <h3>4. Preguntas frecuentes</h3>
-
-          <h4>¿Puedo contratar solo una pieza, sin todo el paquete mensual?</h4>
-          <p>Sí. Cada actividad del listado se puede cotizar individualmente. La parrilla mensual es la opción más eficiente, pero no es obligatoria.</p>
-
-          <h4>¿Qué pasa si pido cambios fuera de las propuestas incluidas?</h4>
-          <p>Las propuestas incluidas (1 a 3 según la actividad) cubren la mayoría de los casos. Cambios adicionales se cotizan por hora extra, siempre con tu aprobación antes de ejecutar.</p>
-
-          <h4>¿Quién es dueño del contenido producido?</h4>
-          <p>Tú. Una vez entregado y pagado, todo el material es 100% propiedad de tu marca, con archivos editables incluidos cuando aplique.</p>
-
-          <h4>¿Manejan publicidad pagada (ads)?</h4>
-          <p>Sí, dentro del módulo de <a href="#publicidad">Publicidad</a> y la actividad de <em>Concepto de campaña</em>. La gestión y pauta de ads se cotiza aparte del marketing digital orgánico.</p>
-
-          <h4>¿Cómo empezamos?</h4>
-          <p>Con un <strong>Análisis de marca</strong> (2h de ejecución, 3 días de entrega). De ahí sale la estrategia y la primera parrilla. <a href="#contacto">Escríbenos para arrancar.</a></p>
-        </section>
-
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA / CONTACTO -->
-<section class="cta" id="contacto">
-  <div class="container cta__inner">
-    <div class="cta__copy">
-      <span class="eyebrow eyebrow--light">Cotiza tu proyecto</span>
-      <h2>¿Empezamos?</h2>
-      <p>Cuéntanos qué necesitas. Te respondemos con un plan claro de tiempos, propuestas y entregables.</p>
-      <ul class="cta__contacts">
-        <li><strong>Email</strong><a href="mailto:hola@ateris.agency">hola@ateris.agency</a></li>
-        <li><strong>WhatsApp</strong><a href="#">+52 000 000 0000</a></li>
-        <li><strong>Horario</strong><span>Lun – Vie · 9:00 a 18:00</span></li>
+<!-- ════════════════════════ POR QUÊ ════════════════════════ -->
+<section class="section porque" id="porque">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Por quê a ATERIS</span>
+      <h2 class="h2">Quatro razões para confiar.</h2>
+    </div>
+    <div class="why-grid assemble reveal">
+      <div class="why-card">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3 class="why-title">Prazos acordados</h3>
+        <p class="why-text">Combinamos datas reais e cumprimos.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v4H4zM4 13h10v6H4z"/><path d="M18 13l2 2-2 2"/></svg></div>
+        <h3 class="why-title">Propostas reais</h3>
+        <p class="why-text">Escopo e preço claros antes de assinar.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h3A4.5 4.5 0 0 1 15 18.5V20M15 20v-1a3 3 0 0 1 3-3h1a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3 class="why-title">Equipe integral</h3>
+        <p class="why-text">Todas as áreas em um só lugar, coordenadas.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19V5M4 19h16M8 16l3-4 3 2 5-7"/></svg></div>
+        <h3 class="why-title">Resultados mensuráveis</h3>
+        <p class="why-text">Relatórios com números, não promessas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ ASSEMBLE: SITE ════════════════════════ -->
+<section class="assemble-site" id="site">
+  <div class="wrap site-head-wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Presença digital</span>
+      <h2 class="h2">Seu site, montado bloco a bloco.</h2>
+      <p class="lede">Da estrutura ao lançamento, você acompanha cada etapa.</p>
+    </div>
+  </div>
+  <div class="site-track" id="siteTrack">
+    <div class="site-stage">
+      <div class="site-frame" id="siteFrame" aria-hidden="true">
+      <div class="sf-bar">
+        <div class="sf-dots"><i></i><i></i><i></i></div>
+        <span class="sf-url" data-no-i18n>suamarca.com</span>
+      </div>
+      <span class="site-live"><i></i>Ao vivo</span>
+      <div class="sf-body">
+        <div class="sf-block sf-nav">
+          <span class="nb-logo"></span>
+          <span class="nb-right"><span class="nb-links"><i></i><i></i><i></i></span><span class="nb-cta"></span></span>
+        </div>
+        <div class="sf-block sf-hero">
+          <div class="sf-hero-l">
+            <span class="hl"></span>
+            <span class="hl short"></span>
+            <span class="hl thin"></span>
+            <span class="hl btn"></span>
+          </div>
+          <div class="sf-hero-r"></div>
+        </div>
+        <div class="sf-block sf-cards">
+          <span class="sc"></span><span class="sc"></span><span class="sc"></span>
+        </div>
+        <div class="sf-block sf-foot">
+          <span class="ff" style="width:90px"></span>
+          <span class="ff" style="width:150px"></span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ FAQ ════════════════════════ -->
+<section class="section faq" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Perguntas</span>
+      <h2 class="h2">Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal" open>
+        <summary class="faq-q">Quanto custa?</summary>
+        <div class="faq-a">Depende do escopo, mas você recebe uma proposta com preço fechado antes de começar. Sem surpresas na fatura.</div>
+      </details>
+      <details class="faq-item reveal d1">
+        <summary class="faq-q">Posso contratar um só serviço?</summary>
+        <div class="faq-a">Sim. Você contrata só o que precisa — um serviço ou um pacote integral.</div>
+      </details>
+      <details class="faq-item reveal d2">
+        <summary class="faq-q">Em quanto tempo vocês entregam?</summary>
+        <div class="faq-a">Cada atividade tem um prazo acordado por escrito. Você sabe a data de entrega antes de começarmos.</div>
+      </details>
+      <details class="faq-item reveal d3">
+        <summary class="faq-q">O conteúdo é meu?</summary>
+        <div class="faq-a">Sim. Tudo o que produzimos é seu: arquivos, acessos e direitos. Sem reféns.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ CONTATO ════════════════════════ -->
+<section class="section contacto" id="contacto">
+  <div class="wrap contact-grid">
+    <div class="contact-info reveal">
+      <span class="eyebrow">Contato</span>
+      <h2 class="h2">Vamos começar?</h2>
+      <p class="lede">Conte o seu projeto e devolvemos um orçamento claro em menos de 24h.</p>
+
+      <a class="btn btn-wa btn-lg contact-wa" href="https://wa.me/5515988033899?text=Ol%C3%A1%20ATERIS!%20Quero%20um%20or%C3%A7amento%20para%20meu%20projeto." id="waContact" rel="noopener noreferrer" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2"/></svg>
+        <span>Falar pelo WhatsApp</span>
+      </a>
+
+      <ul class="contact-list">
+        <li><span class="cl-k">E-mail</span><a class="cl-v" href="mailto:hola@ateris.agency" data-no-i18n>hola@ateris.agency</a></li>
+        <li><span class="cl-k">WhatsApp</span><a class="cl-v" href="https://wa.me/5515988033899" rel="noopener noreferrer" target="_blank" data-no-i18n>+55 15 98803-3899</a></li>
+        <li><span class="cl-k">Horário</span><span class="cl-v">Seg – Sex · 9:00 às 18:00</span></li>
       </ul>
     </div>
-    <form class="cta__form" id="ctaForm" novalidate aria-label="Formulario de contacto">
+
+    <form class="contact-form reveal d1" id="ctaForm" novalidate>
       <div class="field">
-        <label for="name">Nombre <span class="field__req" aria-hidden="true">*</span></label>
-        <input type="text" id="name" name="name" placeholder="Tu nombre"
-               required minlength="2" maxlength="80"
-               autocomplete="name"
-               aria-required="true" aria-describedby="name-err" />
-        <span class="field__error" id="name-err" aria-live="polite"></span>
+        <label for="f-name">Nome</label>
+        <input id="f-name" name="name" type="text" placeholder="Seu nome" autocomplete="name" aria-required="true" />
+        <span class="field-err" id="err-name" aria-live="polite"></span>
       </div>
       <div class="field">
-        <label for="email">Email <span class="field__req" aria-hidden="true">*</span></label>
-        <input type="email" id="email" name="email" placeholder="tu@empresa.com"
-               required maxlength="120"
-               autocomplete="email" inputmode="email"
-               aria-required="true" aria-describedby="email-err" />
-        <span class="field__error" id="email-err" aria-live="polite"></span>
+        <label for="f-email">E-mail</label>
+        <input id="f-email" name="email" type="email" placeholder="voce@email.com" autocomplete="email" aria-required="true" />
+        <span class="field-err" id="err-email" aria-live="polite"></span>
       </div>
       <div class="field">
-        <label for="service">Servicio de interés</label>
-        <select id="service" name="service" autocomplete="off">
-          <option>Dirección de proyectos</option>
+        <label for="f-phone">Telefone / WhatsApp</label>
+        <input id="f-phone" name="phone" type="tel" placeholder="+55 15 90000-0000" autocomplete="tel" />
+      </div>
+      <div class="field">
+        <label for="f-service">Serviço</label>
+        <select id="f-service" name="service">
+          <option value="">Selecione um serviço</option>
+          <option>Direção de projetos</option>
           <option>Branding</option>
-          <option>Desarrollo Web</option>
+          <option>Desenvolvimento Web</option>
           <option>Marketing Digital</option>
-          <option>Publicidad</option>
-          <option>Diseño Gráfico</option>
+          <option>Publicidade</option>
+          <option>Design Gráfico</option>
           <option>Audiovisual</option>
-          <option>Redacción</option>
-          <option>Aún no lo sé</option>
+          <option>Redação</option>
         </select>
       </div>
-      <div class="field">
-        <label for="msg">Mensaje</label>
-        <textarea id="msg" name="msg" rows="4" maxlength="1200"
-                  placeholder="Cuéntanos brevemente tu proyecto"
-                  aria-describedby="msg-help"></textarea>
-        <span class="field__help" id="msg-help">Máximo 1200 caracteres.</span>
+      <div class="field field-full">
+        <label for="f-msg">Mensagem</label>
+        <textarea id="f-msg" name="message" rows="4" placeholder="Conte um pouco sobre seu projeto"></textarea>
       </div>
-      <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
-      <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      <button type="submit" class="btn btn-wa btn-lg form-submit">Quero meu orçamento</button>
+      <p class="form-note">Não compartilhamos seus dados. Só entramos em contato sobre seu projeto.</p>
+      <p class="form-ok" id="formOk" role="status" aria-live="polite" hidden>Mensagem enviada! Responderemos em menos de 24h.</p>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
+</main>
+
+<!-- ════════════════════════ FOOTER ════════════════════════ -->
 <footer class="footer">
-  <div class="container footer__grid">
-    <div class="footer__brand">
-      <a href="#hero" class="logo logo--light">
-        <span class="logo__dot"></span>
-        <span class="logo__name">ATERIS</span>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#hero" aria-label="ATERIS — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28"><rect x="2" y="2" width="28" height="28" rx="9" fill="#ff6b6b"/><path d="M11 21l3.2-10h2.2L19.6 21h-2.3l-.7-2.4h-3.4L12.5 21H11zm2.7-4.2h2.3l-1.1-3.8-1.2 3.8z" fill="#fff"/></svg>
+        </span>
+        <span class="brand-name" data-no-i18n>ATERIS</span>
       </a>
-      <p>Agencia de marketing digital. El tiempo es oro.</p>
+      <p class="footer-tag">Agência de marketing digital com todas as cartas sobre a mesa.</p>
     </div>
-    <div class="footer__col">
-      <h5>Servicios</h5>
-      <ul>
-        <li><a href="#branding">Branding</a></li>
-        <li><a href="#web">Desarrollo Web</a></li>
-        <li><a href="#marketing">Marketing Digital</a></li>
-        <li><a href="#publicidad">Publicidad</a></li>
-      </ul>
+    <div class="footer-col">
+      <h4 class="footer-h">Serviços</h4>
+      <a href="#servicios">Branding</a>
+      <a href="#servicios">Desenvolvimento Web</a>
+      <a href="#servicios">Marketing Digital</a>
+      <a href="catalogo.html">Catálogo completo</a>
     </div>
-    <div class="footer__col">
-      <h5>Estudio</h5>
-      <ul>
-        <li><a href="#grafico">Diseño Gráfico</a></li>
-        <li><a href="#audio">Audiovisual</a></li>
-        <li><a href="#redaccion">Redacción</a></li>
-        <li><a href="#direccion">Dirección de proyectos</a></li>
-      </ul>
+    <div class="footer-col">
+      <h4 class="footer-h">Estúdio</h4>
+      <a href="#metodo">Método</a>
+      <a href="#proceso">Processo</a>
+      <a href="#faq">Perguntas</a>
     </div>
-    <div class="footer__col">
-      <h5>Contacto</h5>
-      <ul>
-        <li><a href="mailto:hola@ateris.agency">hola@ateris.agency</a></li>
-        <li><a href="#">WhatsApp</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
+    <div class="footer-col">
+      <h4 class="footer-h">Contato</h4>
+      <a href="mailto:hola@ateris.agency" data-no-i18n>hola@ateris.agency</a>
+      <a href="https://wa.me/5515988033899" rel="noopener noreferrer" target="_blank" data-no-i18n>+55 15 98803-3899</a>
+      <span class="footer-muted">Seg – Sex · 9:00 às 18:00</span>
     </div>
   </div>
-  <div class="footer__bottom">
-    <div class="container">
-      <span>© <span id="year"></span> ATERIS. Todos los derechos reservados.</span>
-      <span>Hecho con ☕ y todas las cartas sobre la mesa.</span>
-    </div>
+  <div class="wrap footer-bottom">
+    <span data-no-i18n>© <span id="year">2026</span> ATERIS</span>
+    <span>Todos os direitos reservados.</span>
   </div>
 </footer>
 
+<a class="wa-float" href="https://wa.me/5515988033899?text=Ol%C3%A1%20ATERIS!%20Quero%20um%20or%C3%A7amento%20para%20meu%20projeto." id="waFloat" rel="noopener noreferrer" target="_blank" aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2"/></svg>
+</a>
+
 <script src="translations.js"></script>
-<script src="script.js"></script>
+<script src="landing.js"></script>
 </body>
 </html>

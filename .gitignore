@@ -4,3 +4,7 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# Skills de desarrollo (no forman parte del sitio publicado)
+.agents/
+skills-lock.json
