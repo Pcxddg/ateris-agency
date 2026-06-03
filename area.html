@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="pt" data-base-lang="pt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ATERIS — Painel do cliente</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="area.css" />
+</head>
+<body class="app-body" data-app-guard>
+
+<!-- ════════ SIDEBAR ════════ -->
+<aside class="side" id="side">
+  <div class="side-brand">
+    <a class="brand" href="/" aria-label="ATERIS">
+      <span class="brand-mark"><svg viewBox="0 0 32 32" width="30" height="30"><rect x="2" y="2" width="28" height="28" rx="9" fill="#ff6b6b"/><path d="M11 21l3.2-10h2.2L19.6 21h-2.3l-.7-2.4h-3.4L12.5 21H11zm2.7-4.2h2.3l-1.1-3.8-1.2 3.8z" fill="#fff"/></svg></span>
+      <span class="brand-name">ATERIS</span>
+    </a>
+    <button class="side-close" id="sideClose" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <nav class="side-nav" aria-label="Painel">
+    <div class="brand-switch" id="brandSwitch">
+      <button class="bs-trigger" id="bsTrigger" aria-haspopup="listbox" aria-expanded="false">
+        <span class="bs-logo" id="bsLogo">MD</span>
+        <span class="bs-meta"><b id="bsName">Marca Demo</b><small id="bsPlan">Pacote Full</small></span>
+        <svg class="bs-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="bs-pop" id="bsPop" role="listbox" hidden></div>
+    </div>
+    <a class="side-link active" href="#inicio" data-view="inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8M5 9.5V21h14V9.5"/></svg><span>Início</span></a>
+    <a class="side-link" href="#entregaveis" data-view="entregaveis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg><span>Entregáveis</span><span class="side-badge" id="badgeNew">2</span></a>
+    <a class="side-link" href="#projetos" data-view="projetos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg><span>Projetos</span></a>
+    <a class="side-link" href="#faturas" data-view="faturas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg><span>Faturas</span></a>
+    <a class="side-link" href="#mensagens" data-view="mensagens"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Mensagens</span></a>
+    <a class="side-link" href="#relatorios" data-view="relatorios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 16l3-4 3 2 5-7"/></svg><span>Relatórios</span></a>
+    <a class="side-link" href="#solicitacoes" data-view="solicitacoes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg><span>Solicitações</span><span class="side-badge side-badge-y" id="badgeCredits">8</span></a>
+  </nav>
+
+  <div class="side-foot">
+    <a class="side-link side-cfg" href="#config" data-view="config"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg><span>Configurações</span></a>
+    <a class="side-support" href="https://wa.me/5515988033899" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2"/></svg>
+      <span>Suporte direto</span>
+    </a>
+  </div>
+</aside>
+<div class="side-scrim" id="sideScrim" hidden></div>
+
+<!-- ════════ MAIN ════════ -->
+<div class="app-main">
+  <!-- Topbar -->
+  <header class="topbar">
+    <button class="side-open" id="sideOpen" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="topbar-title">
+      <h1 class="tb-h1" id="viewTitle">Início</h1>
+      <p class="tb-sub" id="viewSub">Resumo do seu projeto com a ATERIS</p>
+    </div>
+    <div class="topbar-tools">
+      <div class="tb-notif">
+        <button class="tb-icon" id="notifBtn" aria-label="Notificações" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="tb-dot"></span></button>
+        <div class="notif-pop" id="notifPop" hidden>
+          <div class="notif-head"><b>Notificações</b><button class="notif-clear" id="notifClear">Marcar lidas</button></div>
+          <div class="notif-list" id="notifList"></div>
+        </div>
+      </div>
+      <div class="tb-user">
+        <span class="tb-avatar" id="tbAvatar">MA</span>
+        <div class="tb-user-meta">
+          <b id="tbName">Marca Demo</b>
+          <small>Cliente</small>
+        </div>
+        <button class="tb-logout" id="logoutBtn" aria-label="Sair">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-scroll" id="appScroll">
+
+    <!-- ═══ VISTA: INÍCIO ═══ -->
+    <section class="view active" data-panel="inicio">
+      <div class="brief-banner" id="briefBanner" hidden>
+        <div class="bb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <div class="bb-body">
+          <b>Complete o brief da sua marca</b>
+          <small>Faltam alguns dados para começarmos com tudo claro. Leva 2 minutos.</small>
+        </div>
+        <button class="btn btn-wa bb-btn" data-jump="brief">Preencher brief</button>
+      </div>
+      <div class="welcome">
+        <div>
+          <h2 class="welcome-h">Olá, <span id="welcomeName">Marca Demo</span> 👋</h2>
+          <p class="welcome-sub">Seu projeto <b>Identidade + Site</b> está <b class="hl">82% concluído</b>. Você tem <b class="hl">2 entregáveis novos</b> para revisar.</p>
+        </div>
+        <a class="btn btn-wa" href="#entregaveis" data-jump="entregaveis">Ver entregáveis novos</a>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi-ic ic-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg></div>
+          <div class="kpi-num" data-count="14" data-no-i18n>0</div>
+          <div class="kpi-label">Entregáveis prontos</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-ic ic-yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div class="kpi-num" data-count="3" data-no-i18n>0</div>
+          <div class="kpi-label">Em andamento</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-ic ic-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <div class="kpi-num"><span data-count="82" data-no-i18n>0</span><span data-no-i18n>%</span></div>
+          <div class="kpi-label">Progresso geral</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-ic ic-ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
+          <div class="kpi-num" data-no-i18n>12 jun</div>
+          <div class="kpi-label">Próxima entrega</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Progreso del proyecto -->
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Progresso do projeto</h3>
+            <span class="chip chip-ok">No prazo</span>
+          </div>
+          <div class="timeline">
+            <div class="tl-step done"><span class="tl-dot"></span><div><b>Análise &amp; estratégia</b><small>Concluído · 8 mai</small></div></div>
+            <div class="tl-step done"><span class="tl-dot"></span><div><b>Identidade visual</b><small>Concluído · 22 mai</small></div></div>
+            <div class="tl-step active"><span class="tl-dot"></span><div><b>Desenvolvimento do site</b><small>Em andamento · 82%</small></div></div>
+            <div class="tl-step"><span class="tl-dot"></span><div><b>Conteúdo &amp; lançamento</b><small>Previsto · 12 jun</small></div></div>
+          </div>
+        </div>
+
+        <!-- Entregables recientes -->
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Entregáveis recentes</h3>
+            <a class="card-link" href="#entregaveis" data-jump="entregaveis">Ver todos →</a>
+          </div>
+          <div class="mini-list" id="recentList"></div>
+        </div>
+      </div>
+
+      <!-- Meu plano contratado -->
+      <div class="card plan-card">
+        <div class="card-head">
+          <h3 class="card-title">Seu plano · Pacote Full</h3>
+          <span class="plan-price" data-no-i18n>$200</span>
+        </div>
+        <div class="plan-grid" id="planGrid"></div>
+      </div>
+    </section>
+
+    <!-- ═══ VISTA: ENTREGÁVEIS ═══ -->
+    <section class="view" data-panel="entregaveis">
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="todos">Todos</button>
+        <button class="filter" data-filter="branding">Branding</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="marketing">Marketing</button>
+        <button class="filter" data-filter="audiovisual">Audiovisual</button>
+      </div>
+      <div class="deliver-grid" id="deliverGrid"></div>
+    </section>
+
+    <!-- ═══ VISTA: PROJETOS ═══ -->
+    <section class="view" data-panel="projetos">
+      <div class="proj-grid" id="projGrid"></div>
+    </section>
+
+    <!-- ═══ VISTA: FATURAS ═══ -->
+    <section class="view" data-panel="faturas">
+      <div class="milestone" id="milestoneBanner">
+        <div class="ms-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div class="ms-body">
+          <b>1 fatura aguarda a aprovação de um entregável</b>
+          <small id="msText">Aprove o <b>Site — versão de revisão</b> para liberar a fatura <b>FAT-0048</b>. Pagamento por etapas: você só avança quando aprovar.</small>
+        </div>
+        <button class="btn btn-wa ms-btn" id="msApprove">Revisar entregável</button>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3 class="card-title">Histórico de faturas</h3><span class="card-link" data-no-i18n>Pagamento por etapas</span></div>
+        <div class="table-wrap">
+          <table class="ftable">
+            <thead><tr><th>Fatura</th><th>Descrição</th><th>Data</th><th>Valor</th><th>Status</th><th></th></tr></thead>
+            <tbody id="invBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VISTA: SOLICITAÇÕES (créditos de design) ═══ -->
+    <section class="view" data-panel="solicitacoes">
+      <div class="credits">
+        <div class="credits-main">
+          <span class="credits-label">Créditos de design disponíveis</span>
+          <div class="credits-num"><span id="creditsNum" data-no-i18n>8</span><small data-no-i18n>/ 10 no mês</small></div>
+          <div class="credits-bar"><span id="creditsBar" style="width:80%"></span></div>
+          <p class="credits-hint">Cada peça (post, story, flyer, banner) usa 1 crédito. Renovam todo dia 1.</p>
+        </div>
+        <form class="credits-form card" id="reqForm">
+          <h3 class="card-title">Solicitar nova peça</h3>
+          <div class="field">
+            <label for="r-type">Tipo de peça</label>
+            <select id="r-type">
+              <option>Post para Instagram</option>
+              <option>Story (não animado)</option>
+              <option>Carrossel (3 imagens)</option>
+              <option>Flyer / panfleto</option>
+              <option>Banner para site</option>
+              <option>Arte para anúncio</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="r-desc">Descrição</label>
+            <textarea id="r-desc" rows="3" placeholder="Conte o que precisa: texto, data, referências..."></textarea>
+            <span class="field-err" id="err-desc" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label>Urgência</label>
+            <div class="urg" id="urg">
+              <button type="button" class="urg-opt active" data-urg="normal">Normal · 3 dias</button>
+              <button type="button" class="urg-opt" data-urg="rapida">Rápida · 24h <small>(+1 crédito)</small></button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-wa" id="reqSubmit">Enviar solicitação <span class="req-cost" id="reqCost" data-no-i18n>· 1 crédito</span></button>
+        </form>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="card-head"><h3 class="card-title">Minhas solicitações</h3></div>
+        <div class="req-list" id="reqList"></div>
+      </div>
+    </section>
+
+    <!-- ═══ VISTA: BRIEF / ONBOARDING ═══ -->
+    <section class="view" data-panel="brief">
+      <div class="brief-wrap">
+        <div class="brief-steps" id="briefSteps">
+          <div class="bstep active" data-step="1"><span class="bs-n">1</span> A marca</div>
+          <div class="bstep" data-step="2"><span class="bs-n">2</span> Objetivos</div>
+          <div class="bstep" data-step="3"><span class="bs-n">3</span> Estilo</div>
+          <div class="bstep" data-step="4"><span class="bs-n">4</span> Logística</div>
+        </div>
+        <div class="brief-prog"><span id="briefProg" style="width:25%"></span></div>
+
+        <form class="card brief-card" id="briefForm">
+          <!-- Paso 1 -->
+          <div class="bpanel active" data-panel-step="1">
+            <h3 class="card-title">Conte sobre a sua marca</h3>
+            <div class="field"><label for="b-name">Nome da marca</label><input id="b-name" type="text" placeholder="Ex.: Café Andino" /></div>
+            <div class="field"><label for="b-sector">Setor / ramo</label><input id="b-sector" type="text" placeholder="Ex.: Cafeteria, moda, tecnologia..." /></div>
+            <div class="field"><label for="b-desc">Em uma frase, o que a sua marca faz?</label><textarea id="b-desc" rows="3" placeholder="Vendemos café de origem para escritórios."></textarea></div>
+          </div>
+          <!-- Paso 2 -->
+          <div class="bpanel" data-panel-step="2">
+            <h3 class="card-title">Seus objetivos</h3>
+            <div class="field"><label>Objetivo principal</label>
+              <div class="chips-pick" data-pick="goal">
+                <button type="button" class="cpick">Mais vendas</button>
+                <button type="button" class="cpick">Reconhecimento</button>
+                <button type="button" class="cpick">Lançar produto</button>
+                <button type="button" class="cpick">Renovar imagem</button>
+              </div>
+            </div>
+            <div class="field"><label for="b-audience">Público-alvo</label><input id="b-audience" type="text" placeholder="Ex.: jovens 18–30, profissionais..." /></div>
+            <div class="field"><label for="b-competitors">Concorrentes ou referências</label><input id="b-competitors" type="text" placeholder="Marcas que você admira" /></div>
+          </div>
+          <!-- Paso 3 -->
+          <div class="bpanel" data-panel-step="3">
+            <h3 class="card-title">Estilo visual</h3>
+            <div class="field"><label>Personalidade da marca</label>
+              <div class="chips-pick" data-pick="style" data-multi="true">
+                <button type="button" class="cpick">Moderna</button>
+                <button type="button" class="cpick">Elegante</button>
+                <button type="button" class="cpick">Divertida</button>
+                <button type="button" class="cpick">Minimalista</button>
+                <button type="button" class="cpick">Ousada</button>
+                <button type="button" class="cpick">Clássica</button>
+              </div>
+            </div>
+            <div class="field"><label>Cores preferidas</label>
+              <div class="swatch-pick" data-pick="colors" data-multi="true">
+                <button type="button" class="swpick" data-c="#ff6b6b" style="--sw:#ff6b6b"></button>
+                <button type="button" class="swpick" data-c="#ffd23f" style="--sw:#ffd23f"></button>
+                <button type="button" class="swpick" data-c="#1f9d63" style="--sw:#1f9d63"></button>
+                <button type="button" class="swpick" data-c="#2d6cdf" style="--sw:#2d6cdf"></button>
+                <button type="button" class="swpick" data-c="#101014" style="--sw:#101014"></button>
+                <button type="button" class="swpick" data-c="#9b59b6" style="--sw:#9b59b6"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Paso 4 -->
+          <div class="bpanel" data-panel-step="4">
+            <h3 class="card-title">Logística do projeto</h3>
+            <div class="field"><label for="b-deadline">Prazo desejado</label>
+              <select id="b-deadline"><option>O quanto antes</option><option>2–4 semanas</option><option>1–2 meses</option><option>Sem pressa</option></select>
+            </div>
+            <div class="field"><label for="b-budget">Orçamento aproximado</label>
+              <select id="b-budget"><option>Pacote Básico ($100)</option><option>Pacote Avançado ($150)</option><option selected>Pacote Full ($200)</option><option>A combinar</option></select>
+            </div>
+            <div class="field"><label for="b-notes">Algo mais que devemos saber?</label><textarea id="b-notes" rows="3" placeholder="Materiais que já tem, restrições, ideias..."></textarea></div>
+          </div>
+
+          <div class="brief-nav">
+            <button type="button" class="btn btn-outline" id="briefBack" hidden>Voltar</button>
+            <button type="button" class="btn btn-wa" id="briefNext">Continuar</button>
+            <button type="submit" class="btn btn-wa" id="briefDone" hidden>Enviar brief</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══ VISTA: RELATÓRIOS ═══ -->
+    <section class="view" data-panel="relatorios">
+      <div class="rep-top">
+        <div class="rep-period" id="repPeriod">
+          <button class="filter" data-period="7d">7 dias</button>
+          <button class="filter active" data-period="30d">30 dias</button>
+          <button class="filter" data-period="90d">90 dias</button>
+        </div>
+        <button class="btn btn-outline rep-export" id="repExport"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Baixar relatório (PDF)</button>
+      </div>
+
+      <!-- KPIs de marketing -->
+      <div class="kpis rep-kpis">
+        <div class="kpi">
+          <div class="kpi-ic ic-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div class="kpi-num"><span data-count="48200" data-fmt="k" data-no-i18n>0</span></div>
+          <div class="kpi-label">Alcance</div>
+          <div class="kpi-delta up" data-no-i18n>▲ 22%</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-ic ic-yellow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+          <div class="kpi-num" data-count="312" data-no-i18n>0</div>
+          <div class="kpi-label">Leads gerados</div>
+          <div class="kpi-delta up" data-no-i18n>▲ 18%</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-ic ic-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="kpi-num"><span data-no-i18n>3.8</span><span data-no-i18n>×</span></div>
+          <div class="kpi-label">ROI estimado</div>
+          <div class="kpi-delta up" data-no-i18n>▲ 0.6×</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-ic ic-ink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+          <div class="kpi-num"><span data-count="4.2" data-dec="1" data-no-i18n>0</span><span data-no-i18n>%</span></div>
+          <div class="kpi-label">Taxa de conversão</div>
+          <div class="kpi-delta up" data-no-i18n>▲ 0.8%</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Gráfico de barras: desempeño por semana -->
+        <div class="card">
+          <div class="card-head">
+            <h3 class="card-title">Leads por semana</h3>
+            <span class="chip chip-ok">+18% vs. período anterior</span>
+          </div>
+          <div class="rbars" id="rbars">
+            <div class="rbar" style="--h:46%"><span data-no-i18n>S1</span></div>
+            <div class="rbar" style="--h:62%"><span data-no-i18n>S2</span></div>
+            <div class="rbar" style="--h:54%"><span data-no-i18n>S3</span></div>
+            <div class="rbar" style="--h:78%"><span data-no-i18n>S4</span></div>
+            <div class="rbar" style="--h:70%"><span data-no-i18n>S5</span></div>
+            <div class="rbar hot" style="--h:100%"><span data-no-i18n>S6</span></div>
+          </div>
+        </div>
+
+        <!-- Donut: canales -->
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">Origem do tráfego</h3></div>
+          <div class="donut-wrap">
+            <div class="donut" id="donut" style="--a:46;--b:74;--c:90"></div>
+            <ul class="donut-leg">
+              <li><span class="dl-dot" style="background:#ff6b6b"></span>Instagram <b data-no-i18n>46%</b></li>
+              <li><span class="dl-dot" style="background:#ffd23f"></span>Google Ads <b data-no-i18n>28%</b></li>
+              <li><span class="dl-dot" style="background:#101014"></span>Orgânico <b data-no-i18n>16%</b></li>
+              <li><span class="dl-dot" style="background:#c9c2b6"></span>Outros <b data-no-i18n>10%</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top conteúdo -->
+      <div class="card" style="margin-top:16px">
+        <div class="card-head"><h3 class="card-title">Conteúdo com melhor desempenho</h3><span class="card-link" data-no-i18n>Instagram · 30 dias</span></div>
+        <div class="table-wrap">
+          <table class="ftable">
+            <thead><tr><th>Publicação</th><th>Formato</th><th>Alcance</th><th>Interações</th><th>Leads</th></tr></thead>
+            <tbody id="topBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VISTA: CONFIGURAÇÕES ═══ -->
+    <section class="view" data-panel="config">
+      <div class="cfg-grid">
+        <!-- Conta -->
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">Dados da conta</h3></div>
+          <form class="cfg-form" id="accForm">
+            <div class="field"><label for="a-name">Nome do responsável</label><input id="a-name" type="text" value="Marca Demo" /></div>
+            <div class="field"><label for="a-email">E-mail de acesso</label><input id="a-email" type="email" value="cliente@suamarca.com" /></div>
+            <div class="field"><label for="a-phone">Telefone / WhatsApp</label><input id="a-phone" type="tel" value="+55 15 98803-3899" /></div>
+            <button type="submit" class="btn btn-wa">Salvar alterações</button>
+          </form>
+        </div>
+
+        <!-- Preferências -->
+        <div class="card">
+          <div class="card-head"><h3 class="card-title">Preferências</h3></div>
+          <div class="pref-list">
+            <label class="pref"><span><b>Notificações por e-mail</b><small>Avisos de novos entregáveis e faturas</small></span><span class="switch"><input type="checkbox" checked /><i></i></span></label>
+            <label class="pref"><span><b>Avisos por WhatsApp</b><small>Mensagens diretas da equipe</small></span><span class="switch"><input type="checkbox" checked /><i></i></span></label>
+            <label class="pref"><span><b>Resumo semanal</b><small>Relatório de progresso toda segunda</small></span><span class="switch"><input type="checkbox" /><i></i></span></label>
+          </div>
+          <div class="cfg-danger">
+            <div><b>Encerrar sessão</b><small>Sair da área de clientes neste dispositivo</small></div>
+            <button class="btn btn-outline" id="cfgLogout">Sair</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empresas / Marcas -->
+      <div class="card" style="margin-top:16px">
+        <div class="card-head">
+          <div>
+            <h3 class="card-title">Empresas &amp; marcas</h3>
+            <p class="cfg-sub">Gerencie as marcas vinculadas à sua conta. Alterne entre elas no topo do painel.</p>
+          </div>
+          <button class="btn btn-wa cfg-add" id="addCompanyBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:16px;height:16px"><path d="M12 5v14M5 12h14"/></svg> Adicionar empresa</button>
+        </div>
+
+        <form class="company-form" id="companyForm" hidden>
+          <div class="field"><label for="c-name">Nome da empresa</label><input id="c-name" type="text" placeholder="Ex.: Café Andino" /><span class="field-err" id="err-cname"></span></div>
+          <div class="field"><label for="c-sector">Setor</label><input id="c-sector" type="text" placeholder="Ex.: Cafeteria" /></div>
+          <div class="company-form-actions">
+            <button type="submit" class="btn btn-wa">Adicionar</button>
+            <button type="button" class="btn btn-outline" id="companyCancel">Cancelar</button>
+          </div>
+        </form>
+
+        <div class="company-list" id="companyList"></div>
+      </div>
+    </section>
+
+    <!-- ═══ VISTA: MENSAGENS ═══ -->
+    <section class="view" data-panel="mensagens">
+      <div class="card chat-card">
+        <div class="card-head"><h3 class="card-title">Conversa com a equipe ATERIS</h3><span class="chip chip-ok">Online</span></div>
+        <div class="chat" id="chat"></div>
+        <form class="chat-form" id="chatForm">
+          <input id="chatInput" type="text" placeholder="Escreva uma mensagem..." autocomplete="off" />
+          <button class="btn btn-wa" type="submit" aria-label="Enviar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ════════ MODAL preview entregável ════════ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-scrim" id="modalScrim"></div>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-x" id="modalX" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="modal-prev" id="modalPrev"></div>
+    <div class="modal-body">
+      <span class="modal-cat" id="modalCat">Branding</span>
+      <h3 class="modal-title" id="modalTitle">Entregável</h3>
+      <p class="modal-meta" id="modalMeta"></p>
+      <div class="modal-actions">
+        <button class="btn btn-wa" id="modalDownload">Baixar arquivo</button>
+        <button class="btn btn-outline" id="modalApprove">Aprovar entregável</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="area.js"></script>
+</body>
+</html>
